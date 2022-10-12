@@ -1,8 +1,9 @@
 package com.auto.insuranceClaim.user;
 
-import com.auto.insuranceClaim.Json.LoginCredentials;
-import com.auto.insuranceClaim.Json.SignUpCredentials;
-import com.auto.insuranceClaim.Json.VehicleInfoJson;
+import com.auto.insuranceClaim.Json.*;
+import com.auto.insuranceClaim.claim.InsuranceClaimRepository;
+import com.auto.insuranceClaim.dbFile.DBFile;
+import com.auto.insuranceClaim.dbFile.DBFileRepository;
 import com.auto.insuranceClaim.exceptions.BadRequestException;
 import com.auto.insuranceClaim.exceptions.UserNotFoundException;
 import com.auto.insuranceClaim.exceptions.VehicleNotFoundException;
@@ -17,18 +18,19 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.transaction.Transactional;
 import java.net.URI;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
     @Autowired private UserRepository userRep;
+    @Autowired private InsuranceClaimRepository claimRep;
+    @Autowired private DBFileRepository DBFileRep;
 
     @Autowired private VehicleRepository vehicleRep;
 
@@ -76,6 +78,14 @@ public class UserService {
         }
     }
 
+    public List<UserDataJson> getAllUsers() {
+        return userRep.findAllByRole("user").stream()
+                .map(user -> {
+                    return new UserDataJson(user.getEmail(), user.getPhoneNumber(),
+                            user.getDob(), user.getClaims(), user.getVehicles());
+                }).collect(Collectors.toList());
+    }
+
     @Transactional
     public ResponseEntity<Object> addVehicle(VehicleInfoJson vehicleInfo) {
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -120,9 +130,33 @@ public class UserService {
                 vehicles.remove(getVehicle.get());
                 user.setVehicles(vehicles);
                 userRep.save(user);
-                vehicleRep.delete(getVehicle.get());
                 return ResponseEntity.ok().build();
             } else throw new VehicleNotFoundException();
         } else throw new UserNotFoundException();
     }
+
+    public ResponseEntity<Object> getRole() {
+        String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Optional<User> getUser = userRep.findByEmail(email);
+        if (getUser.isPresent()) {
+            return ResponseEntity.ok(new RoleJson(getUser.get().getRole()));
+        } else throw new UserNotFoundException();
+    }
+
+    @Transactional
+    public ResponseEntity<Object> deleteUser() {
+        String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Optional<User> getUser = userRep.findByEmail(email);
+        if (getUser.isPresent()) {
+            User user = getUser.get();
+            vehicleRep.findByUser(user).forEach(vehicle -> vehicleRep.delete(vehicle));
+            claimRep.findByUser(user).forEach(claim -> {
+                claim.getDocuments().forEach(dbFile -> DBFileRep.delete(dbFile));
+                claimRep.delete(claim);
+            });
+            userRep.delete(user);
+            return ResponseEntity.ok().build();
+        } else throw new UserNotFoundException();
+    }
+
 }

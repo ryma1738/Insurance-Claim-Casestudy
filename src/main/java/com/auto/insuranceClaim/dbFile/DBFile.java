@@ -1,12 +1,11 @@
 package com.auto.insuranceClaim.dbFile;
 
+import com.auto.insuranceClaim.claim.InsuranceClaim;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -22,6 +21,10 @@ public class DBFile {
 
     @Lob
     private byte[] data;
+
+    @JsonIgnore
+    @ManyToOne
+    private InsuranceClaim claim;
 
     public DBFile(String fileName, String fileType, byte[] data) {
         this.fileName = fileName;

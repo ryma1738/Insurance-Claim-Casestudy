@@ -2,11 +2,13 @@ package com.auto.insuranceClaim.claim;
 
 import com.auto.insuranceClaim.dbFile.DBFile;
 import com.auto.insuranceClaim.user.User;
+import com.auto.insuranceClaim.vehicle.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -24,8 +26,13 @@ public class InsuranceClaim {
     private User user;
 
     @JsonIgnore
-    @OneToMany
-    private Set<DBFile> documents;
+    @OneToMany(mappedBy = "claim", fetch = FetchType.EAGER)
+    private Set<DBFile> documents = new HashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "vehicle_id")
+    @JsonIgnore
+    private Vehicle vehicle;
 
     @Column(length = 1500)
     private String description;

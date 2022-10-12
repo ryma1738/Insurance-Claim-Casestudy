@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -36,11 +37,11 @@ public class User {
 
     @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private Set<InsuranceClaim> claims;
+    private Set<InsuranceClaim> claims = new HashSet<>();
 
     @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private Set<Vehicle> vehicles;
+    private Set<Vehicle> vehicles = new HashSet<>();
 
     @JsonIgnore
     @Column(updatable = false)
