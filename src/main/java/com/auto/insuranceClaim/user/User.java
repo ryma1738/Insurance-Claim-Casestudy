@@ -30,15 +30,13 @@ public class User {
     @NonNull
     private String password;
 
-    @NonNull
     private String phoneNumber;
 
-    @JsonIgnore
     private Date dob;
 
     @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private Set<InsuranceClaim> claim;
+    private Set<InsuranceClaim> claims;
 
     @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)

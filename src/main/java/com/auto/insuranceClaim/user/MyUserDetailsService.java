@@ -25,6 +25,9 @@ public class MyUserDetailsService implements UserDetailsService {
         if (user.getRole().equals("admin"))
             return new org.springframework.security.core.userdetails.User(email, user.getPassword(),
                 Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN")));
+        else if (user.getRole().equals("employee"))
+            return new org.springframework.security.core.userdetails.User(email, user.getPassword(),
+                    Collections.singletonList(new SimpleGrantedAuthority("ROLE_EMPLOYEE")));
         else return new org.springframework.security.core.userdetails.User(email, user.getPassword(),
                 Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
     }
