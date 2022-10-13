@@ -29,7 +29,6 @@ public class UserService {
     @Autowired private UserRepository userRep;
     @Autowired private InsuranceClaimRepository claimRep;
     @Autowired private DBFileRepository DBFileRep;
-
     @Autowired private VehicleRepository vehicleRep;
 
     @Autowired private JWTUtil jwtUtil;

@@ -6,6 +6,7 @@ import com.auto.insuranceClaim.vehicle.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -25,6 +26,7 @@ public class InsuranceClaim {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name="user_id")
+    @NonNull
     private User user;
 
     @JsonIgnore
@@ -34,9 +36,11 @@ public class InsuranceClaim {
     @ManyToOne
     @JoinColumn(name = "vehicle_id")
     @JsonIgnore
+    @NonNull
     private Vehicle vehicle;
 
     @Column(length = 1500)
+    @NonNull
     private String description;
 
     @Enumerated(EnumType.ORDINAL)

@@ -84,7 +84,7 @@ public class InsuranceClaimService {
             claim.setClaimStatus(status);
             InsuranceClaim savedClaim = claimRep.save(claim);
 
-            return ResponseEntity.ok(new InsuranceClaimCreationJson(savedClaim.getId(),
+            return ResponseEntity.ok(new InsuranceClaimInfoJson(savedClaim.getId(),
                     savedClaim.getUser().getId(),
                     savedClaim.getVehicle().getId(),
                     savedClaim.getDescription(),
@@ -110,7 +110,7 @@ public class InsuranceClaimService {
                         .buildAndExpand(savedClaim.getId())
                         .toUri();
                 return ResponseEntity.created(location)
-                        .body(new InsuranceClaimCreationJson(savedClaim.getId(),
+                        .body(new InsuranceClaimInfoJson(savedClaim.getId(),
                                 savedClaim.getUser().getId(),
                                 savedClaim.getVehicle().getId(),
                                 savedClaim.getDescription(),
