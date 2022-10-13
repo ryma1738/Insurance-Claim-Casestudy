@@ -26,7 +26,8 @@ public class DBFile {
     @ManyToOne
     private InsuranceClaim claim;
 
-    public DBFile(String fileName, String fileType, byte[] data) {
+    public DBFile(InsuranceClaim claim, String fileName, String fileType, byte[] data) {
+        this.claim = claim;
         this.fileName = fileName;
         this.fileType = fileType;
         this.data = data;

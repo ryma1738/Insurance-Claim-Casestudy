@@ -27,7 +27,6 @@ public class Vehicle {
 
     private int year;
 
-    @JsonIgnore
     private String vin;
 
     private UseCase useCase;

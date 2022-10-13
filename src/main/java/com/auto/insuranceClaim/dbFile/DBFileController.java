@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,10 +26,10 @@ public class DBFileController {
 
     @Autowired private BDFileService fileService;
 
-    @PostMapping("/uploadFile/{claimId}")
+    @PostMapping("/file/upload/{claimId}")
     public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file,
                                          @PathVariable Long claimId) {
-        DBFile dbFile = fileService.storeFile(file);
+        DBFile dbFile = fileService.storeFile(file, claimId);
 
         String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/downloadFile/")
@@ -39,7 +40,7 @@ public class DBFileController {
                 file.getContentType(), file.getSize());
     }
 
-    @PostMapping("/uploadMultipleFiles/{claimId}")
+    @PostMapping("/file/upload/multiple/{claimId}")
     public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files,
                                                         @PathVariable Long claimId) {
         return Arrays.asList(files)
@@ -48,8 +49,19 @@ public class DBFileController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("/downloadFile/{fileId}")
-    public ResponseEntity<Object> downloadFile(@PathVariable Long fileId) {
+    @GetMapping("/file/download/{fileId}")
+    public ResponseEntity<Object> downloadFileUser(@PathVariable Long fileId) {
+        // Load file from database
+        DBFile dbFile = fileService.getFileUser(fileId);
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(dbFile.getFileType()))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + dbFile.getFileName() + "\"")
+                .body(new ByteArrayResource(dbFile.getData()));
+    }
+
+    @GetMapping("/employee/file/download/{fileId}")
+    public ResponseEntity<Object> downloadFile(@PathVariable Long fileId) throws FileNotFoundException {
         // Load file from database
         DBFile dbFile = fileService.getFile(fileId);
 
