@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public class VehicleNotFoundAdvice {
+public class UserDoesntMatchAdvice {
 
     @ResponseBody
-    @ExceptionHandler(VehicleNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    ErrorMessage vehicleNotFoundHandler(VehicleNotFoundException ex) {
+    @ExceptionHandler(UserDoesntMatchException.class)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    ErrorMessage  userDoesntMatchHandler(UserDoesntMatchException ex) {
         return new ErrorMessage(ex.getMessage());
     }
 }

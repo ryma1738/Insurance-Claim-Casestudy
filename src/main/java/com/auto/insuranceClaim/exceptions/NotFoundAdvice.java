@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public class FileNotFoundAdvice {
+public class NotFoundAdvice {
 
     @ResponseBody
-    @ExceptionHandler(FileNotFoundException.class)
+    @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    ErrorMessage  fileNotFoundHandler(FileNotFoundException ex) {
+    ErrorMessage notFoundHandler(NotFoundException ex) {
         return new ErrorMessage(ex.getMessage());
     }
 }

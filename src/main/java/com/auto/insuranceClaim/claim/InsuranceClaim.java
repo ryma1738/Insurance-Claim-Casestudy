@@ -6,8 +6,10 @@ import com.auto.insuranceClaim.vehicle.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,5 +39,11 @@ public class InsuranceClaim {
     @Column(length = 1500)
     private String description;
 
+    @Enumerated(EnumType.ORDINAL)
+    @Column(name = "status")
     private ClaimStatus claimStatus;
+
+    @CreationTimestamp
+    @Column(updatable = false)
+    private Timestamp createdAt;
 }

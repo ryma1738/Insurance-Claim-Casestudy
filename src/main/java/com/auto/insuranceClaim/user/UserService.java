@@ -2,11 +2,9 @@ package com.auto.insuranceClaim.user;
 
 import com.auto.insuranceClaim.Json.*;
 import com.auto.insuranceClaim.claim.InsuranceClaimRepository;
-import com.auto.insuranceClaim.dbFile.DBFile;
 import com.auto.insuranceClaim.dbFile.DBFileRepository;
 import com.auto.insuranceClaim.exceptions.BadRequestException;
-import com.auto.insuranceClaim.exceptions.UserNotFoundException;
-import com.auto.insuranceClaim.exceptions.VehicleNotFoundException;
+import com.auto.insuranceClaim.exceptions.NotFoundException;
 import com.auto.insuranceClaim.security.JWTUtil;
 import com.auto.insuranceClaim.vehicle.Vehicle;
 import com.auto.insuranceClaim.vehicle.VehicleRepository;
@@ -18,7 +16,6 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.transaction.Transactional;
@@ -115,7 +112,7 @@ public class UserService {
             } catch (Exception ex) {
                 throw new BadRequestException("Invalid Format for Vehicle Registration: ERROR: " + ex.getLocalizedMessage());
             }
-        } else throw new UserNotFoundException();
+        } else throw new NotFoundException("User");
     }
 
     @Transactional
@@ -131,8 +128,8 @@ public class UserService {
                 user.setVehicles(vehicles);
                 userRep.save(user);
                 return ResponseEntity.ok().build();
-            } else throw new VehicleNotFoundException();
-        } else throw new UserNotFoundException();
+            } else throw new NotFoundException("Vehicle");
+        } else throw new NotFoundException("User");
     }
 
     public ResponseEntity<Object> getRole() {
@@ -140,7 +137,7 @@ public class UserService {
         Optional<User> getUser = userRep.findByEmail(email);
         if (getUser.isPresent()) {
             return ResponseEntity.ok(new RoleJson(getUser.get().getRole()));
-        } else throw new UserNotFoundException();
+        } else throw new NotFoundException("User");
     }
 
     @Transactional
@@ -156,7 +153,7 @@ public class UserService {
             });
             userRep.delete(user);
             return ResponseEntity.ok().build();
-        } else throw new UserNotFoundException();
+        } else throw new NotFoundException("User");
     }
 
 }

@@ -11,15 +11,14 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class InsuranceClaimJson {
-
+public class InsuranceClaimFullJson {
     private Long Id;
 
-    private Long userId;
+    private UserDataBasicJson user;
 
     private List<DBFileJson> documents;
 
-    private Long vehicleId;
+    private VehicleInfoJson vehicle;
 
     private String description;
 

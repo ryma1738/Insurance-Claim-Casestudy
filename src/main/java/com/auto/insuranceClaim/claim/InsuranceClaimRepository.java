@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface InsuranceClaimRepository extends JpaRepository<InsuranceClaim, Long> {
     List<InsuranceClaim> findByUser(User user);
-    List<InsuranceClaim> findByStatus(ClaimStatus status);
+    List<InsuranceClaim> findByClaimStatus(ClaimStatus claimStatus);
 }

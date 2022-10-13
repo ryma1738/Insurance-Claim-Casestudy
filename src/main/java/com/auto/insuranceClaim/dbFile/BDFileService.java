@@ -1,7 +1,7 @@
 package com.auto.insuranceClaim.dbFile;
 
-import com.auto.insuranceClaim.exceptions.FileNotFoundException;
 import com.auto.insuranceClaim.exceptions.FileStorageException;
+import com.auto.insuranceClaim.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -34,6 +34,6 @@ public class BDFileService {
 
     public DBFile getFile(Long fileId) {
         return dbFileRepository.findById(fileId)
-                .orElseThrow(() -> new FileNotFoundException("File not found with id " + fileId));
+                .orElseThrow(() -> new NotFoundException("File with id " + fileId));
     }
         }
