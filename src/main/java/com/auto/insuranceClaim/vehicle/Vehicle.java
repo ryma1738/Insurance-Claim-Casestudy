@@ -3,12 +3,15 @@ package com.auto.insuranceClaim.vehicle;
 import com.auto.insuranceClaim.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Vehicle {
 

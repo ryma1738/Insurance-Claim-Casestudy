@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class VehicleInfoJson {
+    private Long id;
+
     private Make make;
 
     private String model;

@@ -55,7 +55,8 @@ public class InsuranceClaimService {
                     claim.getDocuments().stream().map(doc -> new DBFileJson(
                             doc.getId(), doc.getFileName(), doc.getFileType()
                     )).collect(Collectors.toList()),
-                    new VehicleInfoJson(vehicle.getMake(),
+                    new VehicleInfoJson(vehicle.getId(),
+                            vehicle.getMake(),
                             vehicle.getModel(),
                             vehicle.getYear(),
                             vehicle.getVin(),

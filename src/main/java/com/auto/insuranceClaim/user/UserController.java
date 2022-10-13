@@ -1,9 +1,6 @@
 package com.auto.insuranceClaim.user;
 
-import com.auto.insuranceClaim.Json.LoginCredentials;
-import com.auto.insuranceClaim.Json.SignUpCredentials;
-import com.auto.insuranceClaim.Json.UserDataJson;
-import com.auto.insuranceClaim.Json.VehicleInfoJson;
+import com.auto.insuranceClaim.Json.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +20,13 @@ public class UserController {
         return userService.getRole();
     }
 
+    @GetMapping("/user")
+    public ResponseEntity<UserDataJson> getUserInfo() {
+        return userService.getUserInfo();
+    }
+
     @GetMapping("/employee/users")
-    public List<UserDataJson> getAllUsers() {
+    public List<UserDataBasicJson> getAllUsers() {
         return userService.getAllUsers();
     }
 
@@ -49,7 +51,7 @@ public class UserController {
     }
 
     @DeleteMapping("/user/vehicle/{vehicleId}")
-    public ResponseEntity<Object> deleteVehicle(@RequestParam Long vehicleId) {
+    public ResponseEntity<Object> deleteVehicle(@PathVariable Long vehicleId) {
         return userService.deleteVehicle(vehicleId);
     }
 

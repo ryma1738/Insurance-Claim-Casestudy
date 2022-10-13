@@ -1,17 +1,19 @@
 package com.auto.insuranceClaim.Json;
 
 import com.auto.insuranceClaim.claim.InsuranceClaim;
-import com.auto.insuranceClaim.vehicle.Vehicle;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
+
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDataJson {
+
+    private Long id;
 
     private String email;
 
@@ -19,8 +21,8 @@ public class UserDataJson {
 
     private Date dob;
 
-    private Set<InsuranceClaim> claims;
+    private List<InsuranceClaimJson> claims;
 
-    private Set<Vehicle> vehicles;
+    private List<VehicleInfoJson> vehicles;
 
 }

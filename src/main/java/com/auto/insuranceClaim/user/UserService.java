@@ -1,6 +1,7 @@
 package com.auto.insuranceClaim.user;
 
 import com.auto.insuranceClaim.Json.*;
+import com.auto.insuranceClaim.claim.InsuranceClaim;
 import com.auto.insuranceClaim.claim.InsuranceClaimRepository;
 import com.auto.insuranceClaim.dbFile.DBFileRepository;
 import com.auto.insuranceClaim.exceptions.BadRequestException;
@@ -34,6 +35,36 @@ public class UserService {
     @Autowired private JWTUtil jwtUtil;
     @Autowired private AuthenticationManager authManager;
     @Autowired private PasswordEncoder passwordEncoder;
+
+    public ResponseEntity<UserDataJson> getUserInfo() {
+        User user = userRep.findByEmail((String)
+                        SecurityContextHolder.getContext().getAuthentication().getPrincipal())
+                .orElseThrow(() -> new NotFoundException("User"));
+        Set<InsuranceClaim> claims = user.getClaims();
+        Set<Vehicle> vehicles = user.getVehicles();
+        return ResponseEntity.ok(new UserDataJson(user.getId(),
+                user.getEmail(),
+                user.getPhoneNumber(),
+                user.getDob(),
+                claims.stream().map(claim -> new InsuranceClaimJson(claim.getId(),
+                        claim.getUser().getId(),
+                        claim.getDocuments().stream()
+                                .map(file -> new DBFileJson(file.getId(),
+                                        file.getFileName(),
+                                        file.getFileType())
+                                ).collect(Collectors.toList()),
+                        claim.getVehicle().getId(),
+                        claim.getDescription(),
+                        claim.getClaimStatus(),
+                        claim.getCreatedAt())).collect(Collectors.toList()),
+                vehicles.stream().map(vehicle -> new VehicleInfoJson(vehicle.getId(),
+                        vehicle.getMake(),
+                        vehicle.getModel(),
+                        vehicle.getYear(),
+                        vehicle.getVin(),
+                        vehicle.getUseCase())).collect(Collectors.toList())
+        ));
+    }
 
     public Map<String, String> createUser(SignUpCredentials signupInfo) {
         User user = new User();
@@ -75,11 +106,11 @@ public class UserService {
         }
     }
 
-    public List<UserDataJson> getAllUsers() {
+    public List<UserDataBasicJson> getAllUsers() {
         return userRep.findAllByRole("user").stream()
                 .map(user -> {
-                    return new UserDataJson(user.getEmail(), user.getPhoneNumber(),
-                            user.getDob(), user.getClaims(), user.getVehicles());
+                    return new UserDataBasicJson(user.getId(), user.getEmail(), user.getPhoneNumber(),
+                            user.getDob());
                 }).collect(Collectors.toList());
     }
 
@@ -94,6 +125,7 @@ public class UserService {
                 vehicle.setUser(user);
                 vehicle.setMake(vehicleInfo.getMake());
                 vehicle.setModel(vehicleInfo.getModel());
+                vehicle.setYear(vehicleInfo.getYear());
                 vehicle.setVin(vehicleInfo.getVin());
                 vehicle.setUseCase(vehicleInfo.getUseCase());
                 Vehicle savedVehicle = vehicleRep.save(vehicle);
@@ -123,10 +155,19 @@ public class UserService {
             User user = getUser.get();
             Set<Vehicle> vehicles = user.getVehicles();
             Optional<Vehicle> getVehicle = vehicleRep.findById(vehicleId);
-            if (getVehicle.isPresent()) {
+            if (getVehicle.isPresent() || getVehicle.get().getUser().equals(null)) {
+                System.out.println(vehicles);
+                System.out.println(getVehicle.get());
                 vehicles.remove(getVehicle.get());
                 user.setVehicles(vehicles);
                 userRep.save(user);
+                Vehicle vehicle = getVehicle.get();
+                if (claimRep.findByVehicle(vehicle).isEmpty()) {
+                    vehicleRep.delete(vehicle);
+                } else {
+                    vehicle.setUser(null);
+                    vehicleRep.save(vehicle);
+                }
                 return ResponseEntity.ok().build();
             } else throw new NotFoundException("Vehicle");
         } else throw new NotFoundException("User");
@@ -149,6 +190,7 @@ public class UserService {
             vehicleRep.findByUser(user).forEach(vehicle -> vehicleRep.delete(vehicle));
             claimRep.findByUser(user).forEach(claim -> {
                 claim.getDocuments().forEach(dbFile -> DBFileRep.delete(dbFile));
+                vehicleRep.delete(claim.getVehicle());
                 claimRep.delete(claim);
             });
             userRep.delete(user);
