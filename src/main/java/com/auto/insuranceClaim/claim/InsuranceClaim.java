@@ -4,9 +4,7 @@ import com.auto.insuranceClaim.dbFile.DBFile;
 import com.auto.insuranceClaim.user.User;
 import com.auto.insuranceClaim.vehicle.Vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -15,7 +13,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class InsuranceClaim {
 

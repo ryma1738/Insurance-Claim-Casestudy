@@ -32,11 +32,11 @@ public class DBFileController {
         DBFile dbFile = fileService.storeFile(file, claimId);
 
         String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/downloadFile/")
+                .path("/file/download/")
                 .path(dbFile.getId().toString())
                 .toUriString();
 
-        return new UploadFileResponse(dbFile.getFileName(), fileDownloadUri,
+        return new UploadFileResponse(dbFile.getId(), dbFile.getFileName(), fileDownloadUri,
                 file.getContentType(), file.getSize());
     }
 
