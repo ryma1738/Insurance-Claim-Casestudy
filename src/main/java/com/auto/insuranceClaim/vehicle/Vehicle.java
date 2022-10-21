@@ -2,10 +2,7 @@ package com.auto.insuranceClaim.vehicle;
 
 import com.auto.insuranceClaim.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -24,14 +21,19 @@ public class Vehicle {
     @ManyToOne
     private User user;
 
+    @NonNull
     private Make make;
 
+    @NonNull
     private String model;
 
+    @NonNull
     private int year;
 
+    @NonNull
     private String vin;
 
+    @NonNull
     private UseCase useCase;
 
 }

@@ -26,8 +26,7 @@ function Navigator() {
                         </> : <></>}
                         <p className="my-0 text-link" onClick={(e) => logout(e)}>Logout</p>
                     </div>));
-            } 
-            else if (response.status === 400) {
+            } else if (response.status === 400) {
                 const error = await response.json();
                 console.log(error);
                 alert.error(error.message);

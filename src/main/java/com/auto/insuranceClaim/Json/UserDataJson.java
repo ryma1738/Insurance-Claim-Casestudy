@@ -21,7 +21,7 @@ public class UserDataJson {
 
     private Date dob;
 
-    private List<InsuranceClaimJson> claims;
+    private List<InsuranceClaimFullJson> claims;
 
     private List<VehicleInfoJson> vehicles;
 

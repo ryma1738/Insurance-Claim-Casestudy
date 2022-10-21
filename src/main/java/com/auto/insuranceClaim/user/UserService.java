@@ -45,14 +45,20 @@ public class UserService {
                 user.getEmail(),
                 user.getPhoneNumber(),
                 user.getDob(),
-                claims.stream().map(claim -> new InsuranceClaimJson(claim.getId(),
-                        claim.getUser().getId(),
-                        claim.getDocuments().stream()
-                                .map(file -> new DBFileJson(file.getId(),
-                                        file.getFileName(),
-                                        file.getFileType())
-                                ).collect(Collectors.toList()),
-                        claim.getVehicle().getId(),
+                claims.stream().map(claim -> new InsuranceClaimFullJson(claim.getId(),
+                        new UserDataBasicJson(user.getId(),
+                                user.getEmail(),
+                                user.getPhoneNumber(),
+                                user.getDob()),
+                        claim.getDocuments().stream().map(doc -> new DBFileJson(
+                                doc.getId(), doc.getFileName(), doc.getFileType()
+                        )).collect(Collectors.toList()),
+                        new VehicleInfoJson(claim.getVehicle().getId(),
+                                claim.getVehicle().getMake(),
+                                claim.getVehicle().getModel(),
+                                claim.getVehicle().getYear(),
+                                claim.getVehicle().getVin(),
+                                claim.getVehicle().getUseCase()),
                         claim.getDescription(),
                         claim.getClaimStatus(),
                         claim.getCreatedAt())).collect(Collectors.toList()),

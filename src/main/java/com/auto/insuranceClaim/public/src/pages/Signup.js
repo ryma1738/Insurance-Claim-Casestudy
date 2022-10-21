@@ -19,7 +19,7 @@ function Signup(props) {
         if (password !== confirmPassword) {
             return setErrorMessage("Passwords do not match");
         }
-        const response = await signup(email, password, phoneNumber, dob);
+        const response = await signup(email, password, phoneNumber, new Date(dob));
         if (response.ok) {
             const data = await response.json();
             localStorage.setItem('jwtInsuranceCase', data.jwtToken);

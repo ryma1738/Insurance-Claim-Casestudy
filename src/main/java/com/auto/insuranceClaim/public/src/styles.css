@@ -108,6 +108,10 @@ select:invalid:focus {
   font-size: 4vw;
 }
 
+.fs-7 {
+  font-size: 1vw;
+}
+
 .loginDiv {
   box-shadow: 1px 0px 20px var(--skyBlue);
   border: 5px solid var(--turquoise);
@@ -117,4 +121,23 @@ select:invalid:focus {
 
 .loginDiv input {
   width: 100%;
+}
+
+.deleteButton {
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 3px solid rgb(195, 5, 5);
+  box-shadow: 1px 1px 5px rgb(195, 5, 5);
+  outline: none;
+  color: rgb(195, 5, 5);
+  background-color: var(--white);
+}
+
+.deleteButton:hover {
+  box-shadow: 1px 1px 10px rgb(195, 5, 5);
+}
+
+.deleteButton:active {
+  outline: none;
+  box-shadow: none;
 }
