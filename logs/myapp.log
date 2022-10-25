@@ -1,0 +1,113 @@
+2022-10-25 10:18:38.657  INFO 32552 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 32552 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
+2022-10-25 10:18:38.660  INFO 32552 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-10-25 10:18:39.442  INFO 32552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-25 10:18:39.515  INFO 32552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2022-10-25 10:18:40.403  INFO 32552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-25 10:18:40.418  INFO 32552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-25 10:18:40.419  INFO 32552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-25 10:18:40.542  INFO 32552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-25 10:18:40.543  INFO 32552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1821 ms
+2022-10-25 10:18:40.677  INFO 32552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-25 10:18:41.144  INFO 32552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-25 10:18:41.313  INFO 32552 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-25 10:18:41.407  INFO 32552 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-25 10:18:41.683  INFO 32552 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-25 10:18:41.824  INFO 32552 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-25 10:18:42.778  INFO 32552 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-25 10:18:42.789  INFO 32552 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-25 10:18:43.643  WARN 32552 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-25 10:18:44.076  INFO 32552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34e25492, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32f308c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@51b51641, org.springframework.security.web.header.HeaderWriterFilter@20890a1a, org.springframework.web.filter.CorsFilter@5f2b9da8, org.springframework.security.web.authentication.logout.LogoutFilter@4df0d9f8, com.auto.insuranceClaim.security.JWTFilter@1a2724d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53b7bf01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b4df5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@698ac187, org.springframework.security.web.session.SessionManagementFilter@56266bda, org.springframework.security.web.access.ExceptionTranslationFilter@44976b08, org.springframework.security.web.access.intercept.AuthorizationFilter@7b3c2ae0]
+2022-10-25 10:18:44.345  INFO 32552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-25 10:18:44.358  INFO 32552 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 6.243 seconds (JVM running for 6.742)
+2022-10-25 10:19:20.717  INFO 32552 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-25 10:19:20.717  INFO 32552 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-25 10:19:20.718  INFO 32552 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-25 10:22:47.419  INFO 32552 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-25 10:22:47.421  INFO 32552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-25 10:22:47.430  INFO 32552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-25 10:22:51.200  INFO 27336 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 27336 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
+2022-10-25 10:22:51.205  INFO 27336 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-10-25 10:22:51.992  INFO 27336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-25 10:22:52.069  INFO 27336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+2022-10-25 10:22:52.936  INFO 27336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-25 10:22:52.952  INFO 27336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-25 10:22:52.953  INFO 27336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-25 10:22:53.081  INFO 27336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-25 10:22:53.082  INFO 27336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1818 ms
+2022-10-25 10:22:53.210  INFO 27336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-25 10:22:53.680  INFO 27336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-25 10:22:53.818  INFO 27336 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-25 10:22:53.910  INFO 27336 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-25 10:22:54.198  INFO 27336 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-25 10:22:54.343  INFO 27336 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-25 10:22:55.301  INFO 27336 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-25 10:22:55.312  INFO 27336 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-25 10:22:56.164  WARN 27336 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-25 10:22:56.662  INFO 27336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34e25492, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32f308c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@51b51641, org.springframework.security.web.header.HeaderWriterFilter@20890a1a, org.springframework.web.filter.CorsFilter@5f2b9da8, org.springframework.security.web.authentication.logout.LogoutFilter@4df0d9f8, com.auto.insuranceClaim.security.JWTFilter@1a2724d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53b7bf01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b4df5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@698ac187, org.springframework.security.web.session.SessionManagementFilter@56266bda, org.springframework.security.web.access.ExceptionTranslationFilter@44976b08, org.springframework.security.web.access.intercept.AuthorizationFilter@7b3c2ae0]
+2022-10-25 10:22:56.927  INFO 27336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-25 10:22:56.939  INFO 27336 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 6.265 seconds (JVM running for 6.795)
+2022-10-25 10:23:01.071  INFO 27336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-25 10:23:01.071  INFO 27336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-25 10:23:01.072  INFO 27336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-25 10:23:01.501 TRACE 27336 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Attempted Login
+2022-10-25 10:23:01.719 TRACE 27336 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
+2022-10-25 10:23:46.163  INFO 27336 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-25 10:23:46.165  INFO 27336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-25 10:23:46.173  INFO 27336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-25 10:23:49.753  INFO 22496 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 22496 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
+2022-10-25 10:23:49.758  INFO 22496 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-10-25 10:23:50.553  INFO 22496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-25 10:23:50.630  INFO 22496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+2022-10-25 10:23:51.433  INFO 22496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-25 10:23:51.447  INFO 22496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-25 10:23:51.447  INFO 22496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-25 10:23:51.545  INFO 22496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-25 10:23:51.546  INFO 22496 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1726 ms
+2022-10-25 10:23:51.657  INFO 22496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-25 10:23:52.086  INFO 22496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-25 10:23:52.231  INFO 22496 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-25 10:23:52.301  INFO 22496 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-25 10:23:52.534  INFO 22496 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-25 10:23:52.656  INFO 22496 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-25 10:23:53.474  INFO 22496 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-25 10:23:53.486  INFO 22496 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-25 10:23:53.927 DEBUG 22496 --- [main] c.a.insuranceClaim.security.JWTFilter    : Filter 'JWTFilter' configured for use
+2022-10-25 10:23:54.244  WARN 22496 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-25 10:23:54.639  INFO 22496 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fea5ee0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65f5cae3, org.springframework.security.web.context.SecurityContextPersistenceFilter@139089a4, org.springframework.security.web.header.HeaderWriterFilter@26101efc, org.springframework.web.filter.CorsFilter@6630dd28, org.springframework.security.web.authentication.logout.LogoutFilter@269c7104, com.auto.insuranceClaim.security.JWTFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ff4b223, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@365e65bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5909ae90, org.springframework.security.web.session.SessionManagementFilter@362a6aa5, org.springframework.security.web.access.ExceptionTranslationFilter@70a24f9, org.springframework.security.web.access.intercept.AuthorizationFilter@34e25492]
+2022-10-25 10:23:54.871  INFO 22496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-25 10:23:54.884  INFO 22496 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 5.639 seconds (JVM running for 6.103)
+2022-10-25 10:24:04.831  INFO 22496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-25 10:24:04.831  INFO 22496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-25 10:24:04.833  INFO 22496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-25 10:24:05.315 TRACE 22496 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Attempted Login
+2022-10-25 10:24:05.558 TRACE 22496 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: employee1@gmail.com
+2022-10-25 10:24:05.576 TRACE 22496 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
+2022-10-25 10:24:45.625  INFO 22496 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-25 10:24:45.627  INFO 22496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-25 10:24:45.640  INFO 22496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-25 10:47:21.363  INFO 2068 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 2068 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
+2022-10-25 10:47:21.366  INFO 2068 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-10-25 10:47:22.208  INFO 2068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-25 10:47:22.287  INFO 2068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2022-10-25 10:47:23.172  INFO 2068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-25 10:47:23.188  INFO 2068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-25 10:47:23.189  INFO 2068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-25 10:47:23.304  INFO 2068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-25 10:47:23.304  INFO 2068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1879 ms
+2022-10-25 10:47:23.432  INFO 2068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-25 10:47:23.903  INFO 2068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-25 10:47:24.079  INFO 2068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-25 10:47:24.180  INFO 2068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-25 10:47:24.446  INFO 2068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-25 10:47:24.582  INFO 2068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-25 10:47:25.484  INFO 2068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-25 10:47:25.495  INFO 2068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-25 10:47:25.949 DEBUG 2068 --- [main] c.a.insuranceClaim.security.JWTFilter    : Filter 'JWTFilter' configured for use
+2022-10-25 10:47:26.219  WARN 2068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-25 10:47:26.607  INFO 2068 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fea5ee0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65f5cae3, org.springframework.security.web.context.SecurityContextPersistenceFilter@139089a4, org.springframework.security.web.header.HeaderWriterFilter@26101efc, org.springframework.web.filter.CorsFilter@6630dd28, org.springframework.security.web.authentication.logout.LogoutFilter@269c7104, com.auto.insuranceClaim.security.JWTFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ff4b223, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@365e65bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5909ae90, org.springframework.security.web.session.SessionManagementFilter@362a6aa5, org.springframework.security.web.access.ExceptionTranslationFilter@70a24f9, org.springframework.security.web.access.intercept.AuthorizationFilter@34e25492]
+2022-10-25 10:47:26.855  INFO 2068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-25 10:47:26.866  INFO 2068 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 6.011 seconds (JVM running for 6.548)
+2022-10-25 10:48:37.382  INFO 2068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-25 10:48:37.382  INFO 2068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-25 10:48:37.384  INFO 2068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-25 10:48:37.698 TRACE 2068 --- [http-nio-8080-exec-1] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING

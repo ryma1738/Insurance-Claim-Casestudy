@@ -79,7 +79,8 @@ export const deleteVehicle = (jwt, id) => {
 
 export const createClaim = (jwt, userId, vehicleId, description) => {
     const headers = new Headers({
-        'Authorization': "Bearer " + jwt
+        'Authorization': "Bearer " + jwt,
+        'Content-Type': 'application/json'
     });
     return fetch('/api/v1/claim', {
         method: "POST",
@@ -110,6 +111,47 @@ export const downloadFile = (jwt, docId) => {
     });
     return fetch('api/v1/file/download/' + docId, {
         method: "GET",
+        headers: headers
+    });
+}
+
+export const downloadFileEmployee = (jwt, docId) => {
+    console.log(docId)
+    const headers = new Headers({
+        'Authorization': "Bearer " + jwt
+    });
+    return fetch('api/v1/employee/file/download/' + docId, {
+        method: "GET",
+        headers: headers
+    });
+}
+
+export const getClaimsByStatus = (jwt, status) => {
+    const headers = new Headers({
+        'Authorization': "Bearer " + jwt
+    });
+    return fetch('/api/v1/employee/claims/' + status, {
+        method: "GET",
+        headers: headers
+    });
+}
+
+export const getClaims = (jwt) => {
+    const headers = new Headers({
+        'Authorization': "Bearer " + jwt
+    });
+    return fetch('/api/v1/employee/claims/', {
+        method: "GET",
+        headers: headers
+    });
+}
+
+export const updateClaimStatus = (jwt, claimId, status) => {
+    const headers = new Headers({
+        'Authorization': "Bearer " + jwt
+    });
+    return fetch('/api/v1/employee/claim/'+ claimId + "/" + status, {
+        method: "PUT",
         headers: headers
     });
 }

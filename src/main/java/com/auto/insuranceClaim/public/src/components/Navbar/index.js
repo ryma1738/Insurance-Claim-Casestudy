@@ -50,7 +50,7 @@ function Navigator() {
         localStorage.removeItem("jwtInsuranceCase");
         localStorage.removeItem("roleInsuranceCase");
         getJWT();
-        window.location = "/";
+        window.location = "/login";
     }
 
     useEffect(() => {

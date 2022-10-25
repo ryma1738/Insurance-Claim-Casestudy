@@ -6,6 +6,8 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -15,11 +17,13 @@ import java.util.Date;
 // implementing-json-web-token-jwt-authentication-using-spring-security-detailed-walkthrough-1ac480a8d970
 @Component
 public class JWTUtil {
+    Logger logger = LoggerFactory.getLogger(JWTUtil.class);
 
     @Value("${jwt_secret}")
     private String secret;
 
     public String generateToken(String email) throws IllegalArgumentException, JWTCreationException {
+        logger.trace("Token Created for User: " + email);
         return JWT.create()
                 .withSubject("User Details")
                 .withClaim("email", email)

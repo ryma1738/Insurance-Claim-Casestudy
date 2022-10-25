@@ -2,7 +2,6 @@ package com.auto.insuranceClaim.claim;
 
 import com.auto.insuranceClaim.Json.InsuranceClaimCreationJson;
 import com.auto.insuranceClaim.Json.InsuranceClaimFullJson;
-import com.auto.insuranceClaim.Json.InsuranceClaimJson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +15,12 @@ public class InsuranceClaimController {
     private InsuranceClaimService claimService;
 
     @GetMapping("/employee/claims/{status}")
-    public List<InsuranceClaimJson> getClaimsByStatus(@PathVariable ClaimStatus status) {
+    public List<InsuranceClaimFullJson> getClaimsByStatus(@PathVariable ClaimStatus status) {
         return claimService.getClaimsByStatus(status);
+    }
+    @GetMapping("/employee/claims/")
+    public List<InsuranceClaimFullJson> getClaims() {
+        return claimService.getClaims();
     }
 
     @GetMapping("/employee/claim/{id}")

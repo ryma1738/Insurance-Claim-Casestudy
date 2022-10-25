@@ -108,6 +108,10 @@ select:invalid:focus {
   font-size: 4vw;
 }
 
+.fs-6point5 {
+  font-size: 1.5vw;
+}
+
 .fs-7 {
   font-size: 1vw;
 }
@@ -140,4 +144,8 @@ select:invalid:focus {
 .deleteButton:active {
   outline: none;
   box-shadow: none;
+}
+
+.claimsSearchDiv {
+  border-bottom: 3px solid var(--turquoise);
 }

@@ -22,8 +22,6 @@ import java.util.stream.Collectors;
 public class DBFileController {
     //Credit for code :https://www.callicoder.com/spring-boot-file-upload-download-jpa-hibernate-mysql-database-example/
 
-    private static final Logger logger = LoggerFactory.getLogger(DBFileController.class);
-
     @Autowired private BDFileService fileService;
 
     @PostMapping("/file/upload/{claimId}")
@@ -32,7 +30,7 @@ public class DBFileController {
         DBFile dbFile = fileService.storeFile(file, claimId);
 
         String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/file/download/")
+                .path("/file/upload/" + claimId)
                 .path(dbFile.getId().toString())
                 .toUriString();
 
