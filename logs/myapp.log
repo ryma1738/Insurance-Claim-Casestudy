@@ -1,368 +1,107 @@
-2022-10-25 10:18:38.657  INFO 32552 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 32552 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 10:18:38.660  INFO 32552 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 10:18:39.442  INFO 32552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 10:18:39.515  INFO 32552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
-2022-10-25 10:18:40.403  INFO 32552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-10-25 10:18:40.418  INFO 32552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-25 10:18:40.419  INFO 32552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-25 10:18:40.542  INFO 32552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-25 10:18:40.543  INFO 32552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1821 ms
-2022-10-25 10:18:40.677  INFO 32552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 10:18:41.144  INFO 32552 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 10:18:41.313  INFO 32552 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 10:18:41.407  INFO 32552 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 10:18:41.683  INFO 32552 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 10:18:41.824  INFO 32552 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 10:18:42.778  INFO 32552 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 10:18:42.789  INFO 32552 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 10:18:43.643  WARN 32552 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 10:18:44.076  INFO 32552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34e25492, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32f308c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@51b51641, org.springframework.security.web.header.HeaderWriterFilter@20890a1a, org.springframework.web.filter.CorsFilter@5f2b9da8, org.springframework.security.web.authentication.logout.LogoutFilter@4df0d9f8, com.auto.insuranceClaim.security.JWTFilter@1a2724d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53b7bf01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b4df5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@698ac187, org.springframework.security.web.session.SessionManagementFilter@56266bda, org.springframework.security.web.access.ExceptionTranslationFilter@44976b08, org.springframework.security.web.access.intercept.AuthorizationFilter@7b3c2ae0]
-2022-10-25 10:18:44.345  INFO 32552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-10-25 10:18:44.358  INFO 32552 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 6.243 seconds (JVM running for 6.742)
-2022-10-25 10:19:20.717  INFO 32552 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-25 10:19:20.717  INFO 32552 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-25 10:19:20.718  INFO 32552 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-10-25 10:22:47.419  INFO 32552 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 10:22:47.421  INFO 32552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 10:22:47.430  INFO 32552 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 10:22:51.200  INFO 27336 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 27336 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 10:22:51.205  INFO 27336 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 10:22:51.992  INFO 27336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 10:22:52.069  INFO 27336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
-2022-10-25 10:22:52.936  INFO 27336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-10-25 10:22:52.952  INFO 27336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-25 10:22:52.953  INFO 27336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-25 10:22:53.081  INFO 27336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-25 10:22:53.082  INFO 27336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1818 ms
-2022-10-25 10:22:53.210  INFO 27336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 10:22:53.680  INFO 27336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 10:22:53.818  INFO 27336 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 10:22:53.910  INFO 27336 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 10:22:54.198  INFO 27336 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 10:22:54.343  INFO 27336 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 10:22:55.301  INFO 27336 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 10:22:55.312  INFO 27336 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 10:22:56.164  WARN 27336 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 10:22:56.662  INFO 27336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34e25492, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32f308c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@51b51641, org.springframework.security.web.header.HeaderWriterFilter@20890a1a, org.springframework.web.filter.CorsFilter@5f2b9da8, org.springframework.security.web.authentication.logout.LogoutFilter@4df0d9f8, com.auto.insuranceClaim.security.JWTFilter@1a2724d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53b7bf01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b4df5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@698ac187, org.springframework.security.web.session.SessionManagementFilter@56266bda, org.springframework.security.web.access.ExceptionTranslationFilter@44976b08, org.springframework.security.web.access.intercept.AuthorizationFilter@7b3c2ae0]
-2022-10-25 10:22:56.927  INFO 27336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-10-25 10:22:56.939  INFO 27336 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 6.265 seconds (JVM running for 6.795)
-2022-10-25 10:23:01.071  INFO 27336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-25 10:23:01.071  INFO 27336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-25 10:23:01.072  INFO 27336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-10-25 10:23:01.501 TRACE 27336 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Attempted Login
-2022-10-25 10:23:01.719 TRACE 27336 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
-2022-10-25 10:23:46.163  INFO 27336 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 10:23:46.165  INFO 27336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 10:23:46.173  INFO 27336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 10:23:49.753  INFO 22496 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 22496 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 10:23:49.758  INFO 22496 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 10:23:50.553  INFO 22496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 10:23:50.630  INFO 22496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
-2022-10-25 10:23:51.433  INFO 22496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-10-25 10:23:51.447  INFO 22496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-25 10:23:51.447  INFO 22496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-25 10:23:51.545  INFO 22496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-25 10:23:51.546  INFO 22496 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1726 ms
-2022-10-25 10:23:51.657  INFO 22496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 10:23:52.086  INFO 22496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 10:23:52.231  INFO 22496 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 10:23:52.301  INFO 22496 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 10:23:52.534  INFO 22496 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 10:23:52.656  INFO 22496 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 10:23:53.474  INFO 22496 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 10:23:53.486  INFO 22496 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 10:23:53.927 DEBUG 22496 --- [main] c.a.insuranceClaim.security.JWTFilter    : Filter 'JWTFilter' configured for use
-2022-10-25 10:23:54.244  WARN 22496 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 10:23:54.639  INFO 22496 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fea5ee0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65f5cae3, org.springframework.security.web.context.SecurityContextPersistenceFilter@139089a4, org.springframework.security.web.header.HeaderWriterFilter@26101efc, org.springframework.web.filter.CorsFilter@6630dd28, org.springframework.security.web.authentication.logout.LogoutFilter@269c7104, com.auto.insuranceClaim.security.JWTFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ff4b223, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@365e65bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5909ae90, org.springframework.security.web.session.SessionManagementFilter@362a6aa5, org.springframework.security.web.access.ExceptionTranslationFilter@70a24f9, org.springframework.security.web.access.intercept.AuthorizationFilter@34e25492]
-2022-10-25 10:23:54.871  INFO 22496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-10-25 10:23:54.884  INFO 22496 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 5.639 seconds (JVM running for 6.103)
-2022-10-25 10:24:04.831  INFO 22496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-25 10:24:04.831  INFO 22496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-25 10:24:04.833  INFO 22496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-10-25 10:24:05.315 TRACE 22496 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Attempted Login
-2022-10-25 10:24:05.558 TRACE 22496 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: employee1@gmail.com
-2022-10-25 10:24:05.576 TRACE 22496 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
-2022-10-25 10:24:45.625  INFO 22496 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 10:24:45.627  INFO 22496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 10:24:45.640  INFO 22496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 10:47:21.363  INFO 2068 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 2068 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 10:47:21.366  INFO 2068 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 10:47:22.208  INFO 2068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 10:47:22.287  INFO 2068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
-2022-10-25 10:47:23.172  INFO 2068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-10-25 10:47:23.188  INFO 2068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-25 10:47:23.189  INFO 2068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-25 10:47:23.304  INFO 2068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-25 10:47:23.304  INFO 2068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1879 ms
-2022-10-25 10:47:23.432  INFO 2068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 10:47:23.903  INFO 2068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 10:47:24.079  INFO 2068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 10:47:24.180  INFO 2068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 10:47:24.446  INFO 2068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 10:47:24.582  INFO 2068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 10:47:25.484  INFO 2068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 10:47:25.495  INFO 2068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 10:47:25.949 DEBUG 2068 --- [main] c.a.insuranceClaim.security.JWTFilter    : Filter 'JWTFilter' configured for use
-2022-10-25 10:47:26.219  WARN 2068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 10:47:26.607  INFO 2068 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fea5ee0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65f5cae3, org.springframework.security.web.context.SecurityContextPersistenceFilter@139089a4, org.springframework.security.web.header.HeaderWriterFilter@26101efc, org.springframework.web.filter.CorsFilter@6630dd28, org.springframework.security.web.authentication.logout.LogoutFilter@269c7104, com.auto.insuranceClaim.security.JWTFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ff4b223, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@365e65bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5909ae90, org.springframework.security.web.session.SessionManagementFilter@362a6aa5, org.springframework.security.web.access.ExceptionTranslationFilter@70a24f9, org.springframework.security.web.access.intercept.AuthorizationFilter@34e25492]
-2022-10-25 10:47:26.855  INFO 2068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-10-25 10:47:26.866  INFO 2068 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 6.011 seconds (JVM running for 6.548)
-2022-10-25 10:48:37.382  INFO 2068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-25 10:48:37.382  INFO 2068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-25 10:48:37.384  INFO 2068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-10-25 10:48:37.698 TRACE 2068 --- [http-nio-8080-exec-1] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
-2022-10-25 11:15:44.098  INFO 2068 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:15:44.100  INFO 2068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 11:15:44.110  INFO 2068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 11:18:00.317  INFO 23700 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 23700 (C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy\target\classes started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 11:18:00.320  INFO 23700 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 11:18:01.380  INFO 23700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 11:18:01.468  INFO 23700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 4 JPA repository interfaces.
-2022-10-25 11:18:02.373  INFO 23700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-10-25 11:18:02.390  INFO 23700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-25 11:18:02.390  INFO 23700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-25 11:18:02.572  INFO 23700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-25 11:18:02.572  INFO 23700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2191 ms
-2022-10-25 11:18:02.700  INFO 23700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 11:18:03.251  INFO 23700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 11:18:03.407  INFO 23700 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 11:18:03.493  INFO 23700 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 11:18:03.724  INFO 23700 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 11:18:03.847  INFO 23700 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 11:18:04.611  INFO 23700 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 11:18:04.621  INFO 23700 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:18:05.079 DEBUG 23700 --- [main] c.a.insuranceClaim.security.JWTFilter    : Filter 'JWTFilter' configured for use
-2022-10-25 11:18:05.374  WARN 23700 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 11:18:05.773  INFO 23700 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fea5ee0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65f5cae3, org.springframework.security.web.context.SecurityContextPersistenceFilter@139089a4, org.springframework.security.web.header.HeaderWriterFilter@26101efc, org.springframework.web.filter.CorsFilter@6630dd28, org.springframework.security.web.authentication.logout.LogoutFilter@269c7104, com.auto.insuranceClaim.security.JWTFilter@5ef2cbe6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ff4b223, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@365e65bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5909ae90, org.springframework.security.web.session.SessionManagementFilter@362a6aa5, org.springframework.security.web.access.ExceptionTranslationFilter@70a24f9, org.springframework.security.web.access.intercept.AuthorizationFilter@34e25492]
-2022-10-25 11:18:06.038  INFO 23700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-10-25 11:18:06.051  INFO 23700 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 6.295 seconds (JVM running for 6.924)
-2022-10-25 11:19:38.454  INFO 23700 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-25 11:19:38.454  INFO 23700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-25 11:19:38.456  INFO 23700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-10-25 11:19:38.839 TRACE 23700 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Attempted Login
-2022-10-25 11:19:39.039 TRACE 23700 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: test1@gmail.com
-2022-10-25 11:19:39.056 TRACE 23700 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
-2022-10-25 11:20:09.509  INFO 23700 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:20:09.511  INFO 23700 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 11:20:09.524  INFO 23700 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 11:30:39.269  INFO 32040 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Starting UserServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 32040 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 11:30:39.270 DEBUG 32040 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Running with Spring Boot v2.7.4, Spring v5.3.23
-2022-10-25 11:30:39.271  INFO 32040 --- [main] c.a.insuranceClaim.user.UserServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 11:30:40.113  INFO 32040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 11:30:40.207  INFO 32040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
-2022-10-25 11:30:40.899  INFO 32040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 11:30:41.507  INFO 32040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 11:30:41.683  INFO 32040 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 11:30:41.769  INFO 32040 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 11:30:42.068  INFO 32040 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 11:30:42.250  INFO 32040 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 11:30:43.294  INFO 32040 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 11:30:43.306  INFO 32040 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:30:44.184  WARN 32040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 11:30:45.008  INFO 32040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54556723, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6124dda2, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d174ad, org.springframework.security.web.header.HeaderWriterFilter@9880a15, org.springframework.web.filter.CorsFilter@380e33c2, org.springframework.security.web.authentication.logout.LogoutFilter@df9d400, com.auto.insuranceClaim.security.JWTFilter@7440265c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@173a5fad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7742a276, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bc891f2, org.springframework.security.web.session.SessionManagementFilter@c0013b8, org.springframework.security.web.access.ExceptionTranslationFilter@48d5ca17, org.springframework.security.web.access.intercept.AuthorizationFilter@d2cb2d0]
-2022-10-25 11:30:45.756  INFO 32040 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-10-25 11:30:45.757  INFO 32040 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-10-25 11:30:45.759  INFO 32040 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2022-10-25 11:30:45.792  INFO 32040 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Started UserServiceTest in 6.876 seconds (JVM running for 7.969)
-2022-10-25 11:30:46.361 TRACE 32040 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-10-25 11:30:46.545  INFO 32040 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:30:46.546  INFO 32040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 11:30:46.552  INFO 32040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 11:47:42.739  INFO 26496 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Starting UserServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 26496 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 11:47:42.740 DEBUG 26496 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Running with Spring Boot v2.7.4, Spring v5.3.23
-2022-10-25 11:47:42.741  INFO 26496 --- [main] c.a.insuranceClaim.user.UserServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 11:47:43.486  INFO 26496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 11:47:43.572  INFO 26496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
-2022-10-25 11:47:44.143  INFO 26496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 11:47:44.679  INFO 26496 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 11:47:44.843  INFO 26496 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 11:47:44.924  INFO 26496 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 11:47:45.151  INFO 26496 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 11:47:45.288  INFO 26496 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 11:47:46.151  INFO 26496 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 11:47:46.163  INFO 26496 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:47:47.054  WARN 26496 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 11:47:47.799  INFO 26496 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54556723, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6124dda2, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d174ad, org.springframework.security.web.header.HeaderWriterFilter@9880a15, org.springframework.web.filter.CorsFilter@380e33c2, org.springframework.security.web.authentication.logout.LogoutFilter@df9d400, com.auto.insuranceClaim.security.JWTFilter@7440265c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@173a5fad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7742a276, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bc891f2, org.springframework.security.web.session.SessionManagementFilter@c0013b8, org.springframework.security.web.access.ExceptionTranslationFilter@48d5ca17, org.springframework.security.web.access.intercept.AuthorizationFilter@d2cb2d0]
-2022-10-25 11:47:48.410  INFO 26496 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-10-25 11:47:48.410  INFO 26496 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-10-25 11:47:48.412  INFO 26496 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-10-25 11:47:48.442  INFO 26496 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Started UserServiceTest in 6.094 seconds (JVM running for 7.356)
-2022-10-25 11:47:48.602  INFO 26496 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:47:48.604  INFO 26496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 11:47:48.610  INFO 26496 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 11:57:07.120  INFO 21656 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Starting UserServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 21656 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 11:57:07.146 DEBUG 21656 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Running with Spring Boot v2.7.4, Spring v5.3.23
-2022-10-25 11:57:07.147  INFO 21656 --- [main] c.a.insuranceClaim.user.UserServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 11:57:07.962  INFO 21656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 11:57:08.057  INFO 21656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
-2022-10-25 11:57:08.796  INFO 21656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 11:57:09.394  INFO 21656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 11:57:09.577  INFO 21656 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 11:57:09.678  INFO 21656 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 11:57:09.956  INFO 21656 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 11:57:10.108  INFO 21656 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 11:57:10.978  INFO 21656 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 11:57:10.990  INFO 21656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:57:11.833  WARN 21656 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 11:57:12.604  INFO 21656 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54556723, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6124dda2, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d174ad, org.springframework.security.web.header.HeaderWriterFilter@9880a15, org.springframework.web.filter.CorsFilter@380e33c2, org.springframework.security.web.authentication.logout.LogoutFilter@df9d400, com.auto.insuranceClaim.security.JWTFilter@7440265c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@173a5fad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7742a276, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bc891f2, org.springframework.security.web.session.SessionManagementFilter@c0013b8, org.springframework.security.web.access.ExceptionTranslationFilter@48d5ca17, org.springframework.security.web.access.intercept.AuthorizationFilter@d2cb2d0]
-2022-10-25 11:57:13.218  INFO 21656 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-10-25 11:57:13.219  INFO 21656 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-10-25 11:57:13.220  INFO 21656 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-10-25 11:57:13.249  INFO 21656 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Started UserServiceTest in 6.54 seconds (JVM running for 7.931)
-2022-10-25 11:57:13.586 TRACE 21656 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-10-25 11:57:13.812 TRACE 21656 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-10-25 11:57:14.069 TRACE 21656 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-10-25 11:57:14.131  INFO 21656 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 23, was deleted from the system.
-2022-10-25 11:57:14.161  INFO 21656 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 11:57:14.163  INFO 21656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 11:57:14.174  INFO 21656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 14:09:50.743  INFO 20648 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Starting UserServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 20648 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 14:09:50.744 DEBUG 20648 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Running with Spring Boot v2.7.4, Spring v5.3.23
-2022-10-25 14:09:50.744  INFO 20648 --- [main] c.a.insuranceClaim.user.UserServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 14:09:51.521  INFO 20648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 14:09:51.593  INFO 20648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 4 JPA repository interfaces.
-2022-10-25 14:09:52.069  INFO 20648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 14:09:52.817  INFO 20648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 14:09:52.961  INFO 20648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 14:09:53.032  INFO 20648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 14:09:53.227  INFO 20648 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 14:09:53.350  INFO 20648 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 14:09:54.080  INFO 20648 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 14:09:54.090  INFO 20648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 14:09:54.793  WARN 20648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 14:09:55.515  INFO 20648 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@54556723, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6124dda2, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d174ad, org.springframework.security.web.header.HeaderWriterFilter@9880a15, org.springframework.web.filter.CorsFilter@380e33c2, org.springframework.security.web.authentication.logout.LogoutFilter@df9d400, com.auto.insuranceClaim.security.JWTFilter@7440265c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@173a5fad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7742a276, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bc891f2, org.springframework.security.web.session.SessionManagementFilter@c0013b8, org.springframework.security.web.access.ExceptionTranslationFilter@48d5ca17, org.springframework.security.web.access.intercept.AuthorizationFilter@d2cb2d0]
-2022-10-25 14:09:56.080  INFO 20648 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-10-25 14:09:56.080  INFO 20648 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-10-25 14:09:56.082  INFO 20648 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2022-10-25 14:09:56.112  INFO 20648 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Started UserServiceTest in 5.667 seconds (JVM running for 9.21)
-2022-10-25 14:09:56.227 TRACE 20648 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-10-25 14:09:56.458 TRACE 20648 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-10-25 14:09:56.825 TRACE 20648 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-10-25 14:09:56.859  INFO 20648 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-10-25 14:09:56.896 TRACE 20648 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to delete vehicle
-2022-10-25 14:09:56.912  INFO 20648 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 25, has been deleted.
-2022-10-25 14:09:56.938  INFO 20648 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 24, was deleted from the system.
-2022-10-25 14:09:56.971  INFO 20648 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 14:09:56.973  INFO 20648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 14:09:56.988  INFO 20648 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 14:10:57.572  INFO 26844 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Starting UserServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 26844 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 14:10:57.573 DEBUG 26844 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Running with Spring Boot v2.7.4, Spring v5.3.23
-2022-10-25 14:10:57.574  INFO 26844 --- [main] c.a.insuranceClaim.user.UserServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 14:10:58.234  INFO 26844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 14:10:58.310  INFO 26844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
-2022-10-25 14:10:58.865  INFO 26844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 14:10:59.366  INFO 26844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 14:10:59.523  INFO 26844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 14:10:59.598  INFO 26844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 14:10:59.826  INFO 26844 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 14:10:59.956  INFO 26844 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 14:11:00.720  INFO 26844 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 14:11:00.729  INFO 26844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 14:11:01.414  WARN 26844 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 14:11:02.040  INFO 26844 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3534651a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d593b56, org.springframework.security.web.context.SecurityContextPersistenceFilter@4db6348b, org.springframework.security.web.header.HeaderWriterFilter@c0013b8, org.springframework.web.filter.CorsFilter@26a33cf, org.springframework.security.web.authentication.logout.LogoutFilter@b34c7c9, com.auto.insuranceClaim.security.JWTFilter@5b7ee56c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f48fa72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20231384, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29188050, org.springframework.security.web.session.SessionManagementFilter@2a42019a, org.springframework.security.web.access.ExceptionTranslationFilter@3722f39d, org.springframework.security.web.access.intercept.AuthorizationFilter@3bc891f2]
-2022-10-25 14:11:02.561  INFO 26844 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-10-25 14:11:02.561  INFO 26844 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-10-25 14:11:02.563  INFO 26844 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-10-25 14:11:02.586  INFO 26844 --- [main] c.a.insuranceClaim.user.UserServiceTest  : Started UserServiceTest in 5.39 seconds (JVM running for 6.533)
-2022-10-25 14:11:02.860 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-10-25 14:11:03.031 TRACE 26844 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-10-25 14:11:03.225 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-10-25 14:11:03.273  INFO 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 26, was deleted from the system.
-2022-10-25 14:11:03.293 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : Search for all users Called
-2022-10-25 14:11:03.521 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User role checked
-2022-10-25 14:11:03.530 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-10-25 14:11:03.612 TRACE 26844 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-10-25 14:11:03.621 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-10-25 14:11:03.635  INFO 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-10-25 14:11:03.653 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to delete vehicle
-2022-10-25 14:11:03.662  INFO 26844 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 28, has been deleted.
-2022-10-25 14:11:03.677  INFO 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 27, was deleted from the system.
-2022-10-25 14:11:03.689 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User Attempted Login
-2022-10-25 14:11:03.844 TRACE 26844 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: test1@gmail.com
-2022-10-25 14:11:03.844 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
-2022-10-25 14:11:03.868 TRACE 26844 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-10-25 14:11:03.904  INFO 26844 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 14:11:03.906  INFO 26844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 14:11:03.910  INFO 26844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 16:04:45.643  INFO 21800 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Starting InsuranceClaimServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 21800 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 16:04:45.644  INFO 21800 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 16:04:46.325  INFO 21800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 16:04:46.406  INFO 21800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
-2022-10-25 16:04:46.952  INFO 21800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 16:04:47.455  INFO 21800 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 16:04:47.632  INFO 21800 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 16:04:47.720  INFO 21800 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 16:04:47.981  INFO 21800 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 16:04:48.140  INFO 21800 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 16:04:49.058  INFO 21800 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 16:04:49.067  INFO 21800 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 16:04:50.212  WARN 21800 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 16:04:50.992  INFO 21800 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22604c7e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d8f2cfd, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bb3f39e, org.springframework.security.web.header.HeaderWriterFilter@a99c42c, org.springframework.web.filter.CorsFilter@6d4502ca, org.springframework.security.web.authentication.logout.LogoutFilter@9880a15, com.auto.insuranceClaim.security.JWTFilter@2673487b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@628b503a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@dbc7e0a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ab2009f, org.springframework.security.web.session.SessionManagementFilter@429f0ca8, org.springframework.security.web.access.ExceptionTranslationFilter@a55e82a, org.springframework.security.web.access.intercept.AuthorizationFilter@2ae2fa13]
-2022-10-25 16:04:51.683  INFO 21800 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-10-25 16:04:51.683  INFO 21800 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-10-25 16:04:51.685  INFO 21800 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-10-25 16:04:51.715  INFO 21800 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Started InsuranceClaimServiceTest in 6.465 seconds (JVM running for 7.674)
-2022-10-25 16:04:51.770 TRACE 21800 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-10-25 16:04:51.995 TRACE 21800 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-10-25 16:04:52.394 TRACE 21800 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-10-25 16:04:52.414  INFO 21800 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-10-25 16:04:52.450 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-10-25 16:04:52.470  INFO 21800 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-10-25 16:04:52.577 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : User is getting claim with id: 31
-2022-10-25 16:04:52.583 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 31
-2022-10-25 16:04:52.616 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for all claims
-2022-10-25 16:04:52.764 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
-2022-10-25 16:04:52.801 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-10-25 16:04:52.822  INFO 21800 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-10-25 16:04:52.836 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 31
-2022-10-25 16:04:52.858 TRACE 21800 --- [main] c.a.i.claim.InsuranceClaimService        : Employee is attempting to update the status of claim with id: 31
-2022-10-25 16:04:52.899  INFO 21800 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 30, was deleted from the system
-2022-10-25 16:04:52.906  INFO 21800 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 30, was deleted from the system
-2022-10-25 16:04:52.907  INFO 21800 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 31, was deleted from the system
-2022-10-25 16:04:52.908  INFO 21800 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 30, was deleted from the system
-2022-10-25 16:04:52.908  INFO 21800 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 32, was deleted from the system
-2022-10-25 16:04:52.909  INFO 21800 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 29, was deleted from the system.
-2022-10-25 16:04:52.936  INFO 21800 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 16:04:52.937  INFO 21800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 16:04:52.947  INFO 21800 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-10-25 16:06:28.638  INFO 24712 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Starting InsuranceClaimServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 24712 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
-2022-10-25 16:06:28.640  INFO 24712 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : No active profile set, falling back to 1 default profile: "default"
-2022-10-25 16:06:29.348  INFO 24712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-10-25 16:06:29.428  INFO 24712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 4 JPA repository interfaces.
-2022-10-25 16:06:29.961  INFO 24712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-10-25 16:06:30.428  INFO 24712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-10-25 16:06:30.573  INFO 24712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-10-25 16:06:30.634  INFO 24712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-10-25 16:06:30.843  INFO 24712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-10-25 16:06:30.970  INFO 24712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-10-25 16:06:31.736  INFO 24712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-10-25 16:06:31.745  INFO 24712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 16:06:32.564  WARN 24712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-10-25 16:06:33.188  INFO 24712 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f6f0fe2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22604c7e, org.springframework.security.web.context.SecurityContextPersistenceFilter@60a4e619, org.springframework.security.web.header.HeaderWriterFilter@1a01ffff, org.springframework.web.filter.CorsFilter@4d8f2cfd, org.springframework.security.web.authentication.logout.LogoutFilter@7c31e410, com.auto.insuranceClaim.security.JWTFilter@3de56885, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11f3400c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fbe486c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d4502ca, org.springframework.security.web.session.SessionManagementFilter@5cf2f5d6, org.springframework.security.web.access.ExceptionTranslationFilter@794d28a3, org.springframework.security.web.access.intercept.AuthorizationFilter@18a0721b]
-2022-10-25 16:06:33.723  INFO 24712 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-10-25 16:06:33.723  INFO 24712 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-10-25 16:06:33.725  INFO 24712 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2022-10-25 16:06:33.749  INFO 24712 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Started InsuranceClaimServiceTest in 5.426 seconds (JVM running for 6.547)
-2022-10-25 16:06:33.788 TRACE 24712 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-10-25 16:06:33.991 TRACE 24712 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-10-25 16:06:34.382 TRACE 24712 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-10-25 16:06:34.400  INFO 24712 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-10-25 16:06:34.432 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-10-25 16:06:34.452  INFO 24712 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-10-25 16:06:34.547 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : User is getting claim with id: 35
-2022-10-25 16:06:34.555 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 35
-2022-10-25 16:06:34.592 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for all claims
-2022-10-25 16:06:34.740 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
-2022-10-25 16:06:34.779 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-10-25 16:06:34.798  INFO 24712 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-10-25 16:06:34.815 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 35
-2022-10-25 16:06:34.840 TRACE 24712 --- [main] c.a.i.claim.InsuranceClaimService        : Employee is attempting to update the status of claim with id: 35
-2022-10-25 16:06:34.889  INFO 24712 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 34, was deleted from the system
-2022-10-25 16:06:34.899  INFO 24712 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 34, was deleted from the system
-2022-10-25 16:06:34.899  INFO 24712 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 35, was deleted from the system
-2022-10-25 16:06:34.900  INFO 24712 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 34, was deleted from the system
-2022-10-25 16:06:34.900  INFO 24712 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 36, was deleted from the system
-2022-10-25 16:06:34.901  INFO 24712 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 33, was deleted from the system.
-2022-10-25 16:06:34.926  INFO 24712 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-10-25 16:06:34.927  INFO 24712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-10-25 16:06:34.934  INFO 24712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-26 09:33:44.483  INFO 17888 --- [main] c.a.i.dbFile.DBFileServiceTest           : Starting DBFileServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 17888 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
+2022-10-26 09:33:44.489 DEBUG 17888 --- [main] c.a.i.dbFile.DBFileServiceTest           : Running with Spring Boot v2.7.4, Spring v5.3.23
+2022-10-26 09:33:44.490  INFO 17888 --- [main] c.a.i.dbFile.DBFileServiceTest           : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 09:33:45.437  INFO 17888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 09:33:45.525  INFO 17888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
+2022-10-26 09:33:46.237  INFO 17888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-26 09:33:46.845  INFO 17888 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-26 09:33:47.064  INFO 17888 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 09:33:47.160  INFO 17888 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-26 09:33:47.406  INFO 17888 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-26 09:33:47.575  INFO 17888 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-26 09:33:48.575  INFO 17888 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 09:33:48.586  INFO 17888 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 09:33:49.588  WARN 17888 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-26 09:33:50.459  INFO 17888 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3d718248, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cdb5974, org.springframework.security.web.context.SecurityContextPersistenceFilter@66a472b9, org.springframework.security.web.header.HeaderWriterFilter@2558f65c, org.springframework.web.filter.CorsFilter@8aa5ab4, org.springframework.security.web.authentication.logout.LogoutFilter@2ce47652, com.auto.insuranceClaim.security.JWTFilter@17f8db6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ddd84d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62b786dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53e4a19e, org.springframework.security.web.session.SessionManagementFilter@28519bfb, org.springframework.security.web.access.ExceptionTranslationFilter@2bb3f39e, org.springframework.security.web.access.intercept.AuthorizationFilter@14b5325f]
+2022-10-26 09:33:51.152  INFO 17888 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-10-26 09:33:51.152  INFO 17888 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-10-26 09:33:51.153  INFO 17888 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-10-26 09:33:51.185  INFO 17888 --- [main] c.a.i.dbFile.DBFileServiceTest           : Started DBFileServiceTest in 7.095 seconds (JVM running for 8.525)
+2022-10-26 09:33:51.238 TRACE 17888 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
+2022-10-26 09:33:51.519 TRACE 17888 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
+2022-10-26 09:33:51.941 TRACE 17888 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
+2022-10-26 09:33:51.961  INFO 17888 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
+2022-10-26 09:33:51.998 TRACE 17888 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
+2022-10-26 09:33:52.022  INFO 17888 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
+2022-10-26 09:33:52.137 TRACE 17888 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Attempting to save file
+2022-10-26 09:33:52.203  INFO 17888 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : File saved to database successfully
+2022-10-26 09:33:52.213 TRACE 17888 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Employee attempting to Download file with id: 73
+2022-10-26 09:33:52.263 TRACE 17888 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2022-10-26 09:33:52.329  INFO 17888 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 71, was deleted from the system
+2022-10-26 09:33:52.339  INFO 17888 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 71, was deleted from the system
+2022-10-26 09:33:52.340  INFO 17888 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 72, was deleted from the system
+2022-10-26 09:33:52.341  INFO 17888 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 70, was deleted from the system.
+2022-10-26 09:33:52.375  INFO 17888 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 09:33:52.378  INFO 17888 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-26 09:33:52.390  INFO 17888 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-26 09:37:42.784  INFO 35796 --- [main] c.a.i.dbFile.DBFileServiceTest           : Starting DBFileServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 35796 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
+2022-10-26 09:37:42.784 DEBUG 35796 --- [main] c.a.i.dbFile.DBFileServiceTest           : Running with Spring Boot v2.7.4, Spring v5.3.23
+2022-10-26 09:37:42.785  INFO 35796 --- [main] c.a.i.dbFile.DBFileServiceTest           : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 09:37:43.589  INFO 35796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 09:37:43.677  INFO 35796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2022-10-26 09:37:44.228  INFO 35796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-26 09:37:44.757  INFO 35796 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-26 09:37:44.920  INFO 35796 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 09:37:44.996  INFO 35796 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-26 09:37:45.253  INFO 35796 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-26 09:37:45.391  INFO 35796 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-26 09:37:46.281  INFO 35796 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 09:37:46.295  INFO 35796 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 09:37:47.304  WARN 35796 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-26 09:37:48.135  INFO 35796 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a11ae0b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e4d8770, org.springframework.security.web.context.SecurityContextPersistenceFilter@11c3ce6a, org.springframework.security.web.header.HeaderWriterFilter@7a3c99f1, org.springframework.web.filter.CorsFilter@5b5b9521, org.springframework.security.web.authentication.logout.LogoutFilter@79b8ecb, com.auto.insuranceClaim.security.JWTFilter@254e9709, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22899683, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b332b23, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41f7c02d, org.springframework.security.web.session.SessionManagementFilter@11f3400c, org.springframework.security.web.access.ExceptionTranslationFilter@2fa879ed, org.springframework.security.web.access.intercept.AuthorizationFilter@22604c7e]
+2022-10-26 09:37:48.772  INFO 35796 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-10-26 09:37:48.772  INFO 35796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-10-26 09:37:48.774  INFO 35796 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2022-10-26 09:37:48.809  INFO 35796 --- [main] c.a.i.dbFile.DBFileServiceTest           : Started DBFileServiceTest in 6.369 seconds (JVM running for 7.624)
+2022-10-26 09:37:48.862 TRACE 35796 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
+2022-10-26 09:37:49.102 TRACE 35796 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
+2022-10-26 09:37:49.569 TRACE 35796 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
+2022-10-26 09:37:49.596  INFO 35796 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
+2022-10-26 09:37:49.643 TRACE 35796 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
+2022-10-26 09:37:49.671  INFO 35796 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
+2022-10-26 09:37:49.817 TRACE 35796 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Attempting to save file
+2022-10-26 09:37:49.881  INFO 35796 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : File saved to database successfully
+2022-10-26 09:37:49.895 TRACE 35796 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Employee attempting to Download file with id: 77
+2022-10-26 09:37:49.964  INFO 35796 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 75, was deleted from the system
+2022-10-26 09:37:49.974  INFO 35796 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 75, was deleted from the system
+2022-10-26 09:37:49.974  INFO 35796 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 76, was deleted from the system
+2022-10-26 09:37:49.976  INFO 35796 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 74, was deleted from the system.
+2022-10-26 09:37:50.007  INFO 35796 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 09:37:50.009  INFO 35796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-26 09:37:50.017  INFO 35796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-10-26 09:38:01.765  INFO 7248 --- [main] c.a.i.dbFile.DBFileServiceTest           : Starting DBFileServiceTest using Java 1.8.0_352 on LAPTOP-GO9QP6E0 with PID 7248 (started by rymas_ in C:\Users\rymas\Programing\java-8\Insurance-Claim-Casestudy)
+2022-10-26 09:38:01.766 DEBUG 7248 --- [main] c.a.i.dbFile.DBFileServiceTest           : Running with Spring Boot v2.7.4, Spring v5.3.23
+2022-10-26 09:38:01.767  INFO 7248 --- [main] c.a.i.dbFile.DBFileServiceTest           : No active profile set, falling back to 1 default profile: "default"
+2022-10-26 09:38:02.661  INFO 7248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-26 09:38:02.776  INFO 7248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
+2022-10-26 09:38:03.329  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-26 09:38:03.887  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-26 09:38:04.050  INFO 7248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-26 09:38:04.129  INFO 7248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-26 09:38:04.350  INFO 7248 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-26 09:38:04.488  INFO 7248 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-26 09:38:05.338  INFO 7248 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-26 09:38:05.350  INFO 7248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 09:38:06.257  WARN 7248 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-26 09:38:07.010  INFO 7248 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f793f15, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ec7eb5, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fa879ed, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@5534e6f1, org.springframework.security.web.authentication.logout.LogoutFilter@7aa15a80, com.auto.insuranceClaim.security.JWTFilter@6851b296, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ec082a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60a4e619, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c6fc3e7, org.springframework.security.web.session.SessionManagementFilter@70ee9d31, org.springframework.security.web.access.ExceptionTranslationFilter@4f6fd101, org.springframework.security.web.access.intercept.AuthorizationFilter@4c13ca07]
+2022-10-26 09:38:07.649  INFO 7248 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-10-26 09:38:07.650  INFO 7248 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-10-26 09:38:07.651  INFO 7248 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-10-26 09:38:07.680  INFO 7248 --- [main] c.a.i.dbFile.DBFileServiceTest           : Started DBFileServiceTest in 6.28 seconds (JVM running for 7.592)
+2022-10-26 09:38:07.727 TRACE 7248 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
+2022-10-26 09:38:07.948 TRACE 7248 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
+2022-10-26 09:38:08.421 TRACE 7248 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
+2022-10-26 09:38:08.444  INFO 7248 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
+2022-10-26 09:38:08.486 TRACE 7248 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
+2022-10-26 09:38:08.513  INFO 7248 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
+2022-10-26 09:38:08.640 TRACE 7248 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Attempting to save file
+2022-10-26 09:38:08.703  INFO 7248 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : File saved to database successfully
+2022-10-26 09:38:08.713 TRACE 7248 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Employee attempting to Download file with id: 81
+2022-10-26 09:38:08.757 TRACE 7248 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2022-10-26 09:38:08.900  INFO 7248 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 79, was deleted from the system
+2022-10-26 09:38:08.909  INFO 7248 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 79, was deleted from the system
+2022-10-26 09:38:08.911  INFO 7248 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 80, was deleted from the system
+2022-10-26 09:38:08.913  INFO 7248 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 78, was deleted from the system.
+2022-10-26 09:38:08.945  INFO 7248 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 09:38:08.947  INFO 7248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-26 09:38:08.953  INFO 7248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
