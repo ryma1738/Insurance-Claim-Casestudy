@@ -1,6 +1,6 @@
 import React, { useState, useEffect, } from 'react';
 import {Container, Row, Col, Modal} from 'react-bootstrap';
-import {getClaimsByStatus, getClaims, downloadFile, updateClaimStatus, downloadFileEmployee} from '../util/api';
+import {getClaimsByStatus, getClaims, updateClaimStatus, downloadFileEmployee} from '../util/api';
 import {formatDate} from '../util/helpers';
 import { saveAs } from 'file-saver';
 
@@ -175,7 +175,7 @@ function Claims() {
         if (localStorage.getItem('jwtInsuranceCase') !== null) {
             initialLoad();
         } else window.location = "/login";
-    }, []);
+    });
 
     return (
         <Container>

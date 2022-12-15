@@ -3,13 +3,11 @@ import {Container, Row, Col} from 'react-bootstrap';
 import {getRole} from '../../util/api';
 function Navigator() {
 
-    const [jwt, setJwt] = useState(null);
     const [navbar, setNavbar] = useState(<></>);
     const [role, setRole] = useState(null);
     
 
     async function getJWT() {
-        setJwt(localStorage.getItem("jwtInsuranceCase"))
         if (localStorage.getItem("jwtInsuranceCase") === null) 
             setNavbar((<p className="my-0"><a href="/login" className="text-decoration-none text-link">Login or Signup</a></p>));
         else {
@@ -55,7 +53,7 @@ function Navigator() {
 
     useEffect(() => {
         getJWT();
-    } ,[])
+    })
 
     return (
         <Container fluid className="nav-bar">
