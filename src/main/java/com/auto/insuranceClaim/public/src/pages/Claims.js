@@ -175,7 +175,7 @@ function Claims() {
         if (localStorage.getItem('jwtInsuranceCase') !== null) {
             initialLoad();
         } else window.location = "/login";
-    });
+    }, []);
 
     return (
         <Container>

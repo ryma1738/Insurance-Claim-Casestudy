@@ -1,212 +1,945 @@
-2022-12-15 15:45:58.704  INFO 49644 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Starting InsuranceClaimServiceTest using Java 1.8.0_331 on The_Ice_Dragon with PID 49644 (started by rymas in C:\Users\rymas\Desktop\Programing\Java-Web-Programing\Java-8-Programing\insuranceClaim)
-2022-12-15 15:45:58.731  INFO 49644 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : No active profile set, falling back to 1 default profile: "default"
-2022-12-15 15:45:59.320  INFO 49644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-15 15:45:59.407  INFO 49644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 4 JPA repository interfaces.
-2022-12-15 15:45:59.813  INFO 49644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-15 15:46:00.476  INFO 49644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-15 15:46:00.616  INFO 49644 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-15 15:46:00.686  INFO 49644 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-12-15 15:46:00.878  INFO 49644 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-15 15:46:01.001  INFO 49644 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-12-15 15:46:01.774  INFO 49644 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-15 15:46:01.785  INFO 49644 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:46:02.476  WARN 49644 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-15 15:46:03.026  INFO 49644 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23e9dd78, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@470c4229, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b8cf049, org.springframework.security.web.header.HeaderWriterFilter@13b29b34, org.springframework.web.filter.CorsFilter@6408be5, org.springframework.security.web.authentication.logout.LogoutFilter@690ed13a, com.auto.insuranceClaim.security.JWTFilter@5f2b9da8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a944af9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@432a6a69, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e57b783, org.springframework.security.web.session.SessionManagementFilter@14239223, org.springframework.security.web.access.ExceptionTranslationFilter@590dea35, org.springframework.security.web.access.intercept.AuthorizationFilter@19739906]
-2022-12-15 15:46:03.468  INFO 49644 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-12-15 15:46:03.468  INFO 49644 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-12-15 15:46:03.469  INFO 49644 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-12-15 15:46:03.490  INFO 49644 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Started InsuranceClaimServiceTest in 5.077 seconds (JVM running for 5.978)
-2022-12-15 15:46:03.529 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:46:03.694 TRACE 49644 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:46:04.023 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-12-15 15:46:04.045  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-12-15 15:46:04.084 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-12-15 15:46:04.107  INFO 49644 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-12-15 15:46:04.199 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : User is getting claim with id: 17
-2022-12-15 15:46:04.205 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 17
-2022-12-15 15:46:04.234 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for all claims
-2022-12-15 15:46:04.351 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
-2022-12-15 15:46:04.369 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-12-15 15:46:04.385  INFO 49644 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-12-15 15:46:04.398 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 17
-2022-12-15 15:46:04.417 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : Employee is attempting to update the status of claim with id: 17
-2022-12-15 15:46:04.449  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 16, was deleted from the system
-2022-12-15 15:46:04.455  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 16, was deleted from the system
-2022-12-15 15:46:04.456  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 17, was deleted from the system
-2022-12-15 15:46:04.456  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 16, was deleted from the system
-2022-12-15 15:46:04.456  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 18, was deleted from the system
-2022-12-15 15:46:04.456  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 15, was deleted from the system.
-2022-12-15 15:46:04.474  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.auto.insuranceClaim.dbFile.DBFileServiceTest], using SpringBootContextLoader
-2022-12-15 15:46:04.474  INFO 49644 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.auto.insuranceClaim.dbFile.DBFileServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-12-15 15:46:04.474  INFO 49644 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.auto.insuranceClaim.dbFile.DBFileServiceTest]: DBFileServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-12-15 15:46:04.493  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.auto.insuranceClaim.InsuranceClaimApplication for test class com.auto.insuranceClaim.dbFile.DBFileServiceTest
-2022-12-15 15:46:04.495  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-12-15 15:46:04.496  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3794b7b1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3225d950, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1be427b4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@470a446f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@55315a00, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4942e6af, org.springframework.test.context.transaction.TransactionalTestExecutionListener@73a1a1b4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@669daa93, org.springframework.test.context.event.EventPublishingTestExecutionListener@39a30d1a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@670ae31f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1958524b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@129aaac1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3370be55, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d2b13f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@58c36104]
-2022-12-15 15:46:04.500 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:46:04.569 TRACE 49644 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:46:04.575 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-12-15 15:46:04.584  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-12-15 15:46:04.604 TRACE 49644 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-12-15 15:46:04.618  INFO 49644 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-12-15 15:46:04.628 TRACE 49644 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Attempting to save file
-2022-12-15 15:46:04.659  INFO 49644 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : File saved to database successfully
-2022-12-15 15:46:04.665 TRACE 49644 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Employee attempting to Download file with id: 22
-2022-12-15 15:46:04.681 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-12-15 15:46:04.710  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 20, was deleted from the system
-2022-12-15 15:46:04.712  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 20, was deleted from the system
-2022-12-15 15:46:04.713  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 21, was deleted from the system
-2022-12-15 15:46:04.713  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 19, was deleted from the system.
-2022-12-15 15:46:04.723  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.auto.insuranceClaim.InsuranceClaimApplicationTests], using SpringBootContextLoader
-2022-12-15 15:46:04.723  INFO 49644 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.auto.insuranceClaim.InsuranceClaimApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-12-15 15:46:04.723  INFO 49644 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.auto.insuranceClaim.InsuranceClaimApplicationTests]: InsuranceClaimApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-12-15 15:46:04.727  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.auto.insuranceClaim.InsuranceClaimApplication for test class com.auto.insuranceClaim.InsuranceClaimApplicationTests
-2022-12-15 15:46:04.729  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-12-15 15:46:04.729  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@758ebec4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c247363, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@c6d7256, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@48188d23, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4860627a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67f0bf7e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@e88e14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c157abf, org.springframework.test.context.event.EventPublishingTestExecutionListener@472dbaf5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@25c4f621, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@619854a3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@46ff1aad, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6c2fea95, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6ed87ccf, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4d4600fb]
-2022-12-15 15:46:04.758  INFO 49644 --- [main] c.a.i.InsuranceClaimApplicationTests     : Starting InsuranceClaimApplicationTests using Java 1.8.0_331 on The_Ice_Dragon with PID 49644 (started by rymas in C:\Users\rymas\Desktop\Programing\Java-Web-Programing\Java-8-Programing\insuranceClaim)
-2022-12-15 15:46:04.759  INFO 49644 --- [main] c.a.i.InsuranceClaimApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2022-12-15 15:46:04.932  INFO 49644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-15 15:46:04.960  INFO 49644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 4 JPA repository interfaces.
-2022-12-15 15:46:05.065  INFO 49644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-12-15 15:46:05.100  INFO 49644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-12-15 15:46:05.124  INFO 49644 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-15 15:46:05.128  INFO 49644 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-12-15 15:46:05.202  INFO 49644 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-15 15:46:05.202  INFO 49644 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:46:05.337  WARN 49644 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-15 15:46:05.549  INFO 49644 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ac1161f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f5bfbca, org.springframework.security.web.context.SecurityContextPersistenceFilter@5bddd141, org.springframework.security.web.header.HeaderWriterFilter@1f02b6d1, org.springframework.web.filter.CorsFilter@552b15f6, org.springframework.security.web.authentication.logout.LogoutFilter@3cb376a3, com.auto.insuranceClaim.security.JWTFilter@40071890, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d6027be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@475eb4fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cd6d147, org.springframework.security.web.session.SessionManagementFilter@66a50c93, org.springframework.security.web.access.ExceptionTranslationFilter@5c194652, org.springframework.security.web.access.intercept.AuthorizationFilter@78c23ade]
-2022-12-15 15:46:05.845  INFO 49644 --- [main] c.a.i.InsuranceClaimApplicationTests     : Started InsuranceClaimApplicationTests in 1.113 seconds (JVM running for 8.333)
-2022-12-15 15:46:05.853  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.auto.insuranceClaim.user.UserServiceTest], using SpringBootContextLoader
-2022-12-15 15:46:05.854  INFO 49644 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.auto.insuranceClaim.user.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-12-15 15:46:05.854  INFO 49644 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.auto.insuranceClaim.user.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-12-15 15:46:05.863  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.auto.insuranceClaim.InsuranceClaimApplication for test class com.auto.insuranceClaim.user.UserServiceTest
-2022-12-15 15:46:05.865  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-12-15 15:46:05.865  INFO 49644 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@69a3944, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4987142d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3e3bf77b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@41e76252, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@16602333, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67376bae, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d6d81c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c59cf66, org.springframework.test.context.event.EventPublishingTestExecutionListener@6bb71265, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@37816ea6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a74672, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@35b79b1f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@664083f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a8835c6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@67216c33]
-2022-12-15 15:46:05.875 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:46:05.947 TRACE 49644 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:46:05.954 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-12-15 15:46:05.969  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 23, was deleted from the system.
-2022-12-15 15:46:05.979 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Search for all users Called
-2022-12-15 15:46:06.049 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User role checked
-2022-12-15 15:46:06.058 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:46:06.128 TRACE 49644 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:46:06.134 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-12-15 15:46:06.142  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-12-15 15:46:06.157 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to delete vehicle
-2022-12-15 15:46:06.179  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 25, has been deleted.
-2022-12-15 15:46:06.196  INFO 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 24, was deleted from the system.
-2022-12-15 15:46:06.205 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User Attempted Login
-2022-12-15 15:46:06.344 TRACE 49644 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: test1@gmail.com
-2022-12-15 15:46:06.345 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
-2022-12-15 15:46:06.371 TRACE 49644 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-12-15 15:46:06.406  INFO 49644 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:46:06.408  INFO 49644 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-15 15:46:06.415  INFO 49644 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-15 15:46:06.419  INFO 49644 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:46:06.420  INFO 49644 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-12-15 15:46:06.432  INFO 49644 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2022-12-15 15:48:13.027  INFO 41804 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Starting InsuranceClaimServiceTest using Java 1.8.0_331 on The_Ice_Dragon with PID 41804 (started by rymas in C:\Users\rymas\Desktop\Programing\Java-Web-Programing\Java-8-Programing\insuranceClaim)
-2022-12-15 15:48:13.029  INFO 41804 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : No active profile set, falling back to 1 default profile: "default"
-2022-12-15 15:48:13.547  INFO 41804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-15 15:48:13.626  INFO 41804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
-2022-12-15 15:48:14.002  INFO 41804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-15 15:48:14.570  INFO 41804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-15 15:48:14.687  INFO 41804 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-15 15:48:14.737  INFO 41804 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
-2022-12-15 15:48:14.912  INFO 41804 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-15 15:48:15.026  INFO 41804 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-12-15 15:48:15.752  INFO 41804 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-15 15:48:15.761  INFO 41804 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:48:16.447  WARN 41804 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-15 15:48:16.973  INFO 41804 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b64f771, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@153c6603, org.springframework.security.web.context.SecurityContextPersistenceFilter@1cdd31a4, org.springframework.security.web.header.HeaderWriterFilter@70169464, org.springframework.web.filter.CorsFilter@24e2355c, org.springframework.security.web.authentication.logout.LogoutFilter@563ada5, com.auto.insuranceClaim.security.JWTFilter@56872fcb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71316cd7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a944af9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19739906, org.springframework.security.web.session.SessionManagementFilter@25589735, org.springframework.security.web.access.ExceptionTranslationFilter@7853363c, org.springframework.security.web.access.intercept.AuthorizationFilter@7e691624]
-2022-12-15 15:48:17.420  INFO 41804 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2022-12-15 15:48:17.420  INFO 41804 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2022-12-15 15:48:17.421  INFO 41804 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2022-12-15 15:48:17.439  INFO 41804 --- [main] c.a.i.claims.InsuranceClaimServiceTest   : Started InsuranceClaimServiceTest in 4.692 seconds (JVM running for 5.496)
-2022-12-15 15:48:17.473 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:48:17.638 TRACE 41804 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:48:17.955 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-12-15 15:48:17.976  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-12-15 15:48:18.012 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-12-15 15:48:18.035  INFO 41804 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-12-15 15:48:18.133 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : User is getting claim with id: 28
-2022-12-15 15:48:18.139 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 28
-2022-12-15 15:48:18.166 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for all claims
-2022-12-15 15:48:18.278 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
-2022-12-15 15:48:18.303 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-12-15 15:48:18.322  INFO 41804 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-12-15 15:48:18.336 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : Employee searched for claim with id: 28
-2022-12-15 15:48:18.358 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : Employee is attempting to update the status of claim with id: 28
-2022-12-15 15:48:18.399  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 27, was deleted from the system
-2022-12-15 15:48:18.406  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 27, was deleted from the system
-2022-12-15 15:48:18.408  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 28, was deleted from the system
-2022-12-15 15:48:18.408  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 27, was deleted from the system
-2022-12-15 15:48:18.408  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 29, was deleted from the system
-2022-12-15 15:48:18.409  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 26, was deleted from the system.
-2022-12-15 15:48:18.427  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.auto.insuranceClaim.dbFile.DBFileServiceTest], using SpringBootContextLoader
-2022-12-15 15:48:18.427  INFO 41804 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.auto.insuranceClaim.dbFile.DBFileServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-12-15 15:48:18.427  INFO 41804 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.auto.insuranceClaim.dbFile.DBFileServiceTest]: DBFileServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-12-15 15:48:18.440  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.auto.insuranceClaim.InsuranceClaimApplication for test class com.auto.insuranceClaim.dbFile.DBFileServiceTest
-2022-12-15 15:48:18.442  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-12-15 15:48:18.443  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@495f7ca4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@700202fa, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@141234df, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@65698020, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@57617a75, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3794b7b1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3225d950, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1be427b4, org.springframework.test.context.event.EventPublishingTestExecutionListener@470a446f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@55315a00, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4942e6af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@73a1a1b4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@669daa93, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@39a30d1a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@670ae31f]
-2022-12-15 15:48:18.446 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:48:18.517 TRACE 41804 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:48:18.523 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-12-15 15:48:18.535  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-12-15 15:48:18.548 TRACE 41804 --- [main] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
-2022-12-15 15:48:18.561  INFO 41804 --- [main] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
-2022-12-15 15:48:18.570 TRACE 41804 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Attempting to save file
-2022-12-15 15:48:18.596  INFO 41804 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : File saved to database successfully
-2022-12-15 15:48:18.601 TRACE 41804 --- [main] c.a.insuranceClaim.dbFile.BDFileService  : Employee attempting to Download file with id: 33
-2022-12-15 15:48:18.616 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-12-15 15:48:18.639  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 31, was deleted from the system
-2022-12-15 15:48:18.642  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 31, was deleted from the system
-2022-12-15 15:48:18.642  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Claim with id: 32, was deleted from the system
-2022-12-15 15:48:18.643  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 30, was deleted from the system.
-2022-12-15 15:48:18.651  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.auto.insuranceClaim.InsuranceClaimApplicationTests], using SpringBootContextLoader
-2022-12-15 15:48:18.652  INFO 41804 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.auto.insuranceClaim.InsuranceClaimApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-12-15 15:48:18.652  INFO 41804 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.auto.insuranceClaim.InsuranceClaimApplicationTests]: InsuranceClaimApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-12-15 15:48:18.654  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.auto.insuranceClaim.InsuranceClaimApplication for test class com.auto.insuranceClaim.InsuranceClaimApplicationTests
-2022-12-15 15:48:18.656  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-12-15 15:48:18.656  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1f95158a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@31fc658f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@60d32006, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10820978, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@278c67a7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@758ebec4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c247363, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c6d7256, org.springframework.test.context.event.EventPublishingTestExecutionListener@48188d23, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4860627a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@67f0bf7e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@e88e14, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@c157abf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@472dbaf5, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@25c4f621]
-2022-12-15 15:48:18.678  INFO 41804 --- [main] c.a.i.InsuranceClaimApplicationTests     : Starting InsuranceClaimApplicationTests using Java 1.8.0_331 on The_Ice_Dragon with PID 41804 (started by rymas in C:\Users\rymas\Desktop\Programing\Java-Web-Programing\Java-8-Programing\insuranceClaim)
-2022-12-15 15:48:18.679  INFO 41804 --- [main] c.a.i.InsuranceClaimApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2022-12-15 15:48:18.817  INFO 41804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-15 15:48:18.836  INFO 41804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
-2022-12-15 15:48:18.918  INFO 41804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2022-12-15 15:48:18.937  INFO 41804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2022-12-15 15:48:18.962  INFO 41804 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-15 15:48:18.966  INFO 41804 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-12-15 15:48:19.042  INFO 41804 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-15 15:48:19.043  INFO 41804 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:48:19.182  WARN 41804 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-15 15:48:19.418  INFO 41804 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2526d5f9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b529d42, org.springframework.security.web.context.SecurityContextPersistenceFilter@611a91df, org.springframework.security.web.header.HeaderWriterFilter@63e0057a, org.springframework.web.filter.CorsFilter@459df48d, org.springframework.security.web.authentication.logout.LogoutFilter@7f20dfd5, com.auto.insuranceClaim.security.JWTFilter@556944cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47f5ab58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@245dbd09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@790f4933, org.springframework.security.web.session.SessionManagementFilter@5b76b891, org.springframework.security.web.access.ExceptionTranslationFilter@3ff3275b, org.springframework.security.web.access.intercept.AuthorizationFilter@d763b06]
-2022-12-15 15:48:19.672  INFO 41804 --- [main] c.a.i.InsuranceClaimApplicationTests     : Started InsuranceClaimApplicationTests in 1.014 seconds (JVM running for 7.729)
-2022-12-15 15:48:19.681  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.auto.insuranceClaim.user.UserServiceTest], using SpringBootContextLoader
-2022-12-15 15:48:19.682  INFO 41804 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.auto.insuranceClaim.user.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-12-15 15:48:19.682  INFO 41804 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.auto.insuranceClaim.user.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-12-15 15:48:19.701  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.auto.insuranceClaim.InsuranceClaimApplication for test class com.auto.insuranceClaim.user.UserServiceTest
-2022-12-15 15:48:19.703  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-12-15 15:48:19.703  INFO 41804 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4889fbba, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6018d82c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@572db5ee, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@36f80ceb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31ab75a5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@17541204, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2dec57c5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5b8599c7, org.springframework.test.context.event.EventPublishingTestExecutionListener@31e9d94f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@69a3944, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4987142d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3e3bf77b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@41e76252, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@16602333, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@67376bae]
-2022-12-15 15:48:19.710 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:48:19.784 TRACE 41804 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:48:19.791 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-12-15 15:48:19.806  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 34, was deleted from the system.
-2022-12-15 15:48:19.814 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Search for all users Called
-2022-12-15 15:48:19.877 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User role checked
-2022-12-15 15:48:19.883 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Create User Called
-2022-12-15 15:48:19.953 TRACE 41804 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: Tester2@gmail.com
-2022-12-15 15:48:19.959 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
-2022-12-15 15:48:19.968  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
-2022-12-15 15:48:19.979 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User is attempting to delete vehicle
-2022-12-15 15:48:19.986  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Vehicle with id: 36, has been deleted.
-2022-12-15 15:48:20.000  INFO 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User with id: 35, was deleted from the system.
-2022-12-15 15:48:20.009 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User Attempted Login
-2022-12-15 15:48:20.148 TRACE 41804 --- [main] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: test1@gmail.com
-2022-12-15 15:48:20.149 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
-2022-12-15 15:48:20.172 TRACE 41804 --- [main] c.auto.insuranceClaim.user.UserService   : Get user info route called 
-2022-12-15 15:48:20.204  INFO 41804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:48:20.206  INFO 41804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-15 15:48:20.212  INFO 41804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-15 15:48:20.215  INFO 41804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-15 15:48:20.216  INFO 41804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2022-12-15 15:48:20.225  INFO 41804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-01-11 14:33:36.879  INFO 54892 --- [main] c.a.i.InsuranceClaimApplication          : Starting InsuranceClaimApplication using Java 17.0.1 on The_Ice_Dragon with PID 54892 (C:\Users\rymas\Desktop\Programing\Java-Web-Programing\Java-8-Programing\insuranceClaim\target\classes started by rymas in C:\Users\rymas\Desktop\Programing\Java-Web-Programing\Java-8-Programing\insuranceClaim)
+2023-01-11 14:33:36.889  INFO 54892 --- [main] c.a.i.InsuranceClaimApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-01-11 14:33:37.538  INFO 54892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-11 14:33:37.607  INFO 54892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2023-01-11 14:33:38.188  INFO 54892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-11 14:33:38.196  INFO 54892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-11 14:33:38.197  INFO 54892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-11 14:33:38.319  INFO 54892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-11 14:33:38.319  INFO 54892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1369 ms
+2023-01-11 14:33:38.429  INFO 54892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-11 14:33:38.716  INFO 54892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-11 14:33:38.923  INFO 54892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-11 14:33:39.061  INFO 54892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-11 14:33:39.232  INFO 54892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-11 14:33:39.339  INFO 54892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-11 14:33:39.990  INFO 54892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-11 14:33:39.997  INFO 54892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-11 14:33:40.386 DEBUG 54892 --- [main] c.a.insuranceClaim.security.JWTFilter    : Filter 'JWTFilter' configured for use
+2023-01-11 14:33:40.531  WARN 54892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-11 14:33:40.889  INFO 54892 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ea8224b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a010eec, org.springframework.security.web.context.SecurityContextPersistenceFilter@f996445, org.springframework.security.web.header.HeaderWriterFilter@57ac2910, org.springframework.web.filter.CorsFilter@623ded82, org.springframework.security.web.authentication.logout.LogoutFilter@361483eb, com.auto.insuranceClaim.security.JWTFilter@3c8dea0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7282f7b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c70c771, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@180e33b0, org.springframework.security.web.session.SessionManagementFilter@1fab0394, org.springframework.security.web.access.ExceptionTranslationFilter@6f651ac, org.springframework.security.web.access.intercept.AuthorizationFilter@4e1104f4]
+2023-01-11 14:33:41.144  INFO 54892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-11 14:33:41.155  INFO 54892 --- [main] c.a.i.InsuranceClaimApplication          : Started InsuranceClaimApplication in 4.671 seconds (JVM running for 5.048)
+2023-01-11 14:34:11.921  INFO 54892 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-11 14:34:11.921  INFO 54892 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-11 14:34:11.923  INFO 54892 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-11 14:34:12.164 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:12.168 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:12.237 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:12.553 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:12.556 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:12.587 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:12.880 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:12.885 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:12.904 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:13.221 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:13.225 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:13.240 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:13.560 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:13.563 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:13.887 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:13.889 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:14.228 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:14.231 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:14.553 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:14.556 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:14.881 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:14.885 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:15.223 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:15.225 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:15.545 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:15.548 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:15.870 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:15.874 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:16.214 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:16.217 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:16.842 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:16.845 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:17.170 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:17.172 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:17.492 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:17.495 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:17.816 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:17.819 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:18.144 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:18.148 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:18.467 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:18.470 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:18.793 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:18.795 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:19.116 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:19.118 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:19.436 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:19.439 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:19.767 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:19.770 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:20.092 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:20.093 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:20.416 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:20.418 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:20.741 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:20.743 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:21.066 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:21.068 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:21.392 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:21.395 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:21.726 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:21.728 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:22.057 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:22.060 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:22.382 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:22.383 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:22.698 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:22.699 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:23.029 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:23.030 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:23.355 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:23.356 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:23.679 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:23.681 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:24.003 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:24.005 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:24.327 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:24.330 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:24.651 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:24.653 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:24.976 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:24.977 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:25.301 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:25.303 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:25.626 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:25.628 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:25.950 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:25.952 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:26.275 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:26.277 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:26.600 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:26.602 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:26.924 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:26.925 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:27.248 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:27.250 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:27.578 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:34:27.587 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:34:38.411 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Attempted Login
+2023-01-11 14:34:38.656 ERROR 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User Login had Invalid Login Credentials
+2023-01-11 14:34:51.833 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User Attempted Login
+2023-01-11 14:34:51.951 ERROR 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User Login had Invalid Login Credentials
+2023-01-11 14:35:26.402 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Create User Called
+2023-01-11 14:35:26.503 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: rymaster.ws@gmail.com
+2023-01-11 14:35:26.865 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:27.027 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:27.105 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:27.342 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:27.343 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:27.361 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:27.433 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:27.666 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:27.668 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:27.681 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:27.758 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:27.991 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:28.000 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:28.083 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:28.314 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:28.316 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:28.406 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:28.640 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:28.641 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:28.733 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:28.963 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:28.965 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:29.057 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:29.288 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:29.290 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:29.370 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:29.614 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:29.616 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:29.690 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:29.930 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:29.932 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:30.016 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:30.261 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:30.263 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:30.337 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:30.589 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:30.590 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:30.663 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:30.912 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:30.913 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:30.987 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:31.235 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:31.236 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:31.312 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:31.560 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:31.561 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:31.637 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:31.884 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:31.886 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:31.964 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:32.210 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:32.212 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:32.286 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:32.534 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:32.536 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:32.610 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:32.859 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:32.860 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:32.937 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:33.183 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:33.184 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:33.265 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:33.508 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:33.510 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:33.586 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:33.834 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:33.835 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:33.910 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:34.159 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:34.160 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:34.237 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:34.483 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:34.484 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:34.561 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:34.808 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:34.810 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:34.883 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:35.131 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:35.132 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:35.208 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:35.461 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:35.463 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:35.532 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:35.780 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:35.781 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:35.858 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:36.105 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:36.107 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:36.182 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:36.428 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:36.430 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:36.505 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:36.753 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:36.756 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:36.829 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:37.077 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:37.079 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:37.153 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:37.402 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:37.403 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:37.478 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:37.726 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:37.728 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:37.803 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:38.051 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:38.052 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:38.129 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:38.374 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:38.375 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:38.450 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:38.699 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:38.700 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:38.775 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:39.023 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:39.025 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:39.099 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:39.348 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:39.349 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:39.427 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:39.674 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:39.675 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:39.752 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:39.998 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:40.000 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:40.075 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:40.323 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:40.325 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:40.400 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:40.647 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:40.648 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:40.722 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:40.971 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:40.972 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:41.032 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:41.294 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:41.296 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:41.358 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:41.619 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:41.620 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:41.679 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:41.943 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:41.945 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:42.005 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:42.268 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:42.269 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:42.329 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:42.594 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:42.595 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:42.655 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:42.919 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:42.921 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:42.980 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:43.244 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:43.245 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:43.305 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:43.570 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:43.572 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:43.633 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:43.894 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:43.896 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:43.954 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:44.217 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:44.218 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:44.278 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:44.542 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:44.543 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:44.604 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:44.867 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:44.868 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:44.929 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:45.191 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:45.192 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:45.252 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:45.516 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:45.517 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:45.576 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:45.841 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:45.842 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:45.903 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:46.166 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:46.167 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:46.228 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:46.491 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:46.492 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:46.552 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:46.817 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:46.818 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:46.879 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:47.143 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:47.144 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:47.204 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:47.467 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:47.469 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:47.528 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:47.792 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:47.793 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:47.852 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:48.116 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:48.118 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:48.177 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:48.439 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:48.440 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:48.501 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:48.762 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:48.763 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:48.823 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:49.086 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:49.087 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:49.148 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:49.410 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:49.411 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:49.471 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:49.734 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:49.735 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:49.797 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:50.059 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:50.061 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:50.121 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:50.384 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:50.385 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:50.445 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:50.709 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:50.711 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:50.771 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:51.033 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:51.034 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:51.081 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:51.357 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:51.359 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:51.405 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:51.683 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:51.684 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:51.728 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.008 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.009 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:52.053 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.331 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.333 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:52.377 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.657 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.659 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:52.703 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.985 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:52.987 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:53.030 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:53.309 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:53.310 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:53.359 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:53.634 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:53.707 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:53.721 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:54.036 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:54.037 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:54.362 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:54.363 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:54.685 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:54.686 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:55.010 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:55.011 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:55.334 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:55.335 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:55.661 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:55.662 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:55.984 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:55.986 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:56.309 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:56.310 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:56.633 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:56.634 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:56.961 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:56.962 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:57.282 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:57.283 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:57.608 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:57.610 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:57.932 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:57.933 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:58.257 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:58.259 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:58.582 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:58.584 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:58.909 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:58.911 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:59.235 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:59.237 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:59.559 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:59.561 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:35:59.885 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:35:59.886 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:00.210 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:00.211 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:00.535 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:00.536 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:00.858 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:00.860 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:01.184 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:01.186 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:01.508 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:01.509 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:01.832 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:01.833 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:02.156 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:02.157 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:02.467 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:02.468 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:02.790 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:02.791 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:03.116 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:03.117 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:03.441 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:03.442 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:03.764 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:03.766 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:04.090 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:04.092 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:04.415 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:04.417 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:04.741 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:04.742 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:05.066 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:05.067 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:05.391 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:05.392 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:05.715 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:05.716 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:06.040 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:06.041 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:06.363 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:06.365 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:06.688 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:06.689 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:07.013 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:07.014 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:07.340 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:07.342 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:07.663 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:07.664 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:07.986 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:07.987 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:08.311 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:08.312 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:08.635 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:08.636 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:08.962 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:08.963 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:09.285 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:09.286 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:09.613 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:09.614 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:09.936 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:09.937 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:10.261 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:10.262 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:10.586 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:10.587 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:10.911 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:10.912 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:11.239 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:11.240 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:11.565 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:11.567 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:11.889 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:11.891 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:12.215 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:12.216 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:12.539 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:12.541 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:12.867 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:12.868 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:13.193 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:13.194 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:13.523 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:13.525 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:13.856 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:13.865 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:14.202 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:14.205 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:14.526 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:14.528 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:14.850 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:14.852 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:15.177 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:15.179 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:15.502 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:15.504 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:15.832 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:15.834 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:16.171 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:16.173 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:16.496 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:16.497 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:16.820 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:16.822 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:17.143 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:17.145 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:17.470 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:17.472 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:17.799 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:17.801 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:18.136 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:18.137 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:18.462 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:18.464 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:18.785 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:18.786 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:19.110 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:19.111 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:19.434 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:19.435 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:19.760 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:19.761 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:20.083 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:20.085 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:20.408 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:20.409 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:20.732 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:20.733 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:21.055 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:21.056 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:21.383 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:21.384 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:21.696 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:21.698 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:22.014 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:22.015 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:22.340 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:22.341 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:22.665 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:22.666 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:22.989 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:22.991 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:23.314 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:23.315 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:23.640 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:23.642 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:23.964 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:23.965 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:24.290 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:24.292 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:24.616 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:24.618 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:24.941 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:24.942 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:25.265 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:25.267 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:25.590 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:25.591 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:25.914 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:25.915 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:26.238 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:26.239 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:26.563 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:26.564 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:26.874 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:26.875 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:27.196 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:27.197 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:27.521 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:27.522 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:27.832 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:27.833 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:28.158 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:28.160 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:28.482 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:28.483 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:28.806 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:28.807 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:29.131 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:29.132 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:29.456 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:29.457 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:29.781 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:29.782 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:30.104 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:30.105 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:30.430 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:30.431 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:30.756 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:30.757 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:31.081 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:31.082 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:31.405 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:31.406 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:31.730 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:31.731 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:32.055 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:32.056 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:32.380 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:32.381 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:32.690 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:32.692 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:33.017 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:33.019 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:33.351 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:33.354 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:33.682 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:33.684 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:34.007 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:34.009 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:35.128 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:35.129 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:35.441 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:35.444 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:35.453 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:35.773 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:35.774 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:36.099 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:36.100 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:36.425 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:36.427 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:36.751 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:36.752 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:37.077 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:37.402 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:37.727 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:38.052 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:38.378 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:38.702 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:39.027 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:39.352 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:39.676 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:50.362 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:50.371 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:50.694 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:36:50.696 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:51.311 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:51.323 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:51.641 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:51.966 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:52.291 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:52.617 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:52.942 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:53.267 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:53.593 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:53.917 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:54.242 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:54.567 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:54.880 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:55.202 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:55.527 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:55.853 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:56.178 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:56.490 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:56.815 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:57.140 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:57.465 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:57.790 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:58.116 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:58.434 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:58.690 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:58.767 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:58.843 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.029 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.090 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.168 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.354 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.417 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.493 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.684 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.741 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:36:59.819 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.023 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.067 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.144 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.345 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.391 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.468 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.669 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.731 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.792 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:00.993 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.048 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.117 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.318 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.380 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.442 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.644 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.705 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.766 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:01.967 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.029 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.092 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.293 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.354 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.416 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.618 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.679 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.741 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:02.943 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.005 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.067 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.268 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.330 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.392 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.593 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.655 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.717 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.919 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:03.981 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.041 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.244 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.306 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.367 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.570 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.631 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.693 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.889 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:04.948 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.008 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.220 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.268 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.329 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.546 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.607 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.654 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.876 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.934 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:05.979 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.198 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.260 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.305 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.522 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.584 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.630 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.846 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.909 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:06.955 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.172 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.234 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.280 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.514 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.559 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.604 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.837 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.883 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:07.928 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.162 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.208 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.254 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.486 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.533 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.582 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.811 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.857 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:08.918 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.135 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.182 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.244 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.461 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.507 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.570 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.786 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.832 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:09.894 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.111 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.157 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.219 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.436 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.482 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.544 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.760 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.805 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:10.868 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.085 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.132 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.193 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.410 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.457 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.518 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.735 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.783 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:11.844 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.056 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.107 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.167 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.380 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.431 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.490 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.715 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.976 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:12.979 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:37:13.039 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.080 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:37:13.300 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.301 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.347 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.406 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.626 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.632 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.671 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.702 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.733 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.951 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.951 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:13.998 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.029 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.076 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.275 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.276 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.322 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.368 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.399 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.601 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.601 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.648 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.695 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.726 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.926 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.926 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:14.971 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.018 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.050 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.252 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.252 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.297 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.342 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.390 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.576 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.576 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.622 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.670 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.715 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.898 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.898 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.963 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:15.993 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.039 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.225 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.225 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.286 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.317 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.364 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.551 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.551 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.612 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.643 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.689 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.874 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.935 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:16.967 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.014 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.198 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.260 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.291 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.337 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.524 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.586 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.616 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.662 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.849 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.912 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.941 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:17.987 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.172 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.235 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.266 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.312 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.498 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.561 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.591 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.636 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.823 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.884 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.916 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:18.962 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.149 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.201 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.233 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.285 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.472 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.536 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.551 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.612 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:37:19.803 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:38:58.649 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User Attempted Login
+2023-01-11 14:38:58.709 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: rymaster.ws@gmail.com
+2023-01-11 14:38:58.709 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
+2023-01-11 14:38:58.825 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:38:59.040 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:38:59.136 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:38:59.165 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:39:31.350 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User is attempting to add vehicle to their account
+2023-01-11 14:39:31.375  INFO 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User added new vehicle successfully
+2023-01-11 14:39:32.786 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:40:01.941 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:40:02.085 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:40:02.273 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:40:02.410 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:40:21.642 TRACE 54892 --- [http-nio-8080-exec-5] c.a.i.claim.InsuranceClaimService        : User is attempting to create a new claim
+2023-01-11 14:40:21.663  INFO 54892 --- [http-nio-8080-exec-5] c.a.i.claim.InsuranceClaimService        : New Claim was created successfully
+2023-01-11 14:40:22.645 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:40:54.638 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User Attempted Login
+2023-01-11 14:40:54.699 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.security.JWTUtil   : Token Created for User: employee1@gmail.com
+2023-01-11 14:40:54.699 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User Logged in successfully
+2023-01-11 14:40:54.815 TRACE 54892 --- [http-nio-8080-exec-6] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:40:55.036 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:40:55.130 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:40:55.362 TRACE 54892 --- [http-nio-8080-exec-2] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:40:56.869 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:40:57.110 TRACE 54892 --- [http-nio-8080-exec-10] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
+2023-01-11 14:40:57.184 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:40:57.195 TRACE 54892 --- [http-nio-8080-exec-5] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
+2023-01-11 14:41:07.073 TRACE 54892 --- [http-nio-8080-exec-8] c.a.i.claim.InsuranceClaimService        : Employee is attempting to update the status of claim with id: 270
+2023-01-11 14:41:08.421 TRACE 54892 --- [http-nio-8080-exec-7] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
+2023-01-11 14:41:13.519 TRACE 54892 --- [http-nio-8080-exec-6] c.a.i.claim.InsuranceClaimService        : Employee searched for all claims
+2023-01-11 14:41:31.092 TRACE 54892 --- [http-nio-8080-exec-9] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
+2023-01-11 14:41:31.093 TRACE 54892 --- [http-nio-8080-exec-1] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:41:31.256 TRACE 54892 --- [http-nio-8080-exec-2] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
+2023-01-11 14:41:31.409 TRACE 54892 --- [http-nio-8080-exec-3] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:41:32.816 TRACE 54892 --- [http-nio-8080-exec-10] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:41:33.056 TRACE 54892 --- [http-nio-8080-exec-4] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:41:33.130 TRACE 54892 --- [http-nio-8080-exec-5] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:41:33.140 TRACE 54892 --- [http-nio-8080-exec-8] c.auto.insuranceClaim.user.UserService   : Get user info route called 
+2023-01-11 14:41:37.551 TRACE 54892 --- [http-nio-8080-exec-7] c.auto.insuranceClaim.user.UserService   : User role checked
+2023-01-11 14:41:37.797 TRACE 54892 --- [http-nio-8080-exec-6] c.a.i.claim.InsuranceClaimService        : Employee searched claims by status. STATUS: PROCESSING
+2023-01-11 14:41:37.874 TRACE 54892 --- [http-nio-8080-exec-9] c.auto.insuranceClaim.user.UserService   : User role checked

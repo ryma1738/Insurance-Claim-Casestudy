@@ -271,7 +271,7 @@ function Main() {
         if (localStorage.getItem('jwtInsuranceCase') !== null) {
             loadInfo();
         } else window.location = "/login";
-    })
+    },[])
 
     return (
     <Container>

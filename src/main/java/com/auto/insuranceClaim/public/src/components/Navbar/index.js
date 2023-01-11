@@ -53,7 +53,7 @@ function Navigator() {
 
     useEffect(() => {
         getJWT();
-    })
+    }, [])
 
     return (
         <Container fluid className="nav-bar">
