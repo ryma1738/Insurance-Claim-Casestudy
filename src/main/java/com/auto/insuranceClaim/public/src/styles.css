@@ -1,0 +1,151 @@
+:root {
+  --black: #040f16;
+  --skyBlue: #66ced6;
+  --turquoise: #00bfb3;
+  --blue: #001242;
+  --grey: #90adc3;
+  --white: #E6EEF0;
+}
+
+body {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.nav-bar {
+  border-bottom: 7px solid var(--turquoise);
+}
+
+.navbarText {
+  font-size: 1.6vw;
+}
+
+.lobster {
+  font-family: 'Lobster'
+}
+
+.noButton {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+.button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 3px solid var(--turquoise);
+  box-shadow: 1px 1px 5px var(--skyBlue);
+  outline: none;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.button:hover {
+  box-shadow: 1px 1px 10px var(--skyBlue);
+}
+
+.button:disabled {
+  box-shadow: none;
+  border-color: var(--blue)
+}
+
+.button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+  border-radius: 5px;
+  border: 3px solid var(--turquoise);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 1px 1px 5px var(--skyBlue);
+}
+
+input:invalid:focus,
+textarea:invalid:focus,
+select:invalid:focus {
+  border: 3px solid var(--blue);
+  box-shadow: 1px 1px 5px var(--blue);
+}
+
+.text-link {
+  color: var(--blue);
+}
+
+.text-link:hover {
+  text-decoration: none;
+  color: var(--turquoise);
+}
+
+.no-link {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.no-link:hover {
+  color: var(--black);
+}
+
+.fs-100 {
+  font-size: 6vw;
+}
+
+.fs-50 {
+  font-size: 4vw;
+}
+
+.fs-6point5 {
+  font-size: 1.5vw;
+}
+
+.fs-7 {
+  font-size: 1vw;
+}
+
+.loginDiv {
+  box-shadow: 1px 0px 20px var(--skyBlue);
+  border: 5px solid var(--turquoise);
+  border-radius: 10px;
+  background-color: var(--white)
+}
+
+.loginDiv input {
+  width: 100%;
+}
+
+.deleteButton {
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 3px solid rgb(195, 5, 5);
+  box-shadow: 1px 1px 5px rgb(195, 5, 5);
+  outline: none;
+  color: rgb(195, 5, 5);
+  background-color: var(--white);
+}
+
+.deleteButton:hover {
+  box-shadow: 1px 1px 10px rgb(195, 5, 5);
+}
+
+.deleteButton:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.claimsSearchDiv {
+  border-bottom: 3px solid var(--turquoise);
+}
