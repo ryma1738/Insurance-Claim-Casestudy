@@ -1,7 +1,7 @@
 import {Container, Row } from "react-bootstrap";
 
 const NotFound = () => {
-
+//404 page
     return (
         <Container fluid>
             <Row className="mt-5">
